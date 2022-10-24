@@ -53,7 +53,6 @@ export const FormFooter: FC<FormProps> = ({
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
 
-
     if(isFormValid()){
       setErrormsg('')
       setTouchedName( false );
