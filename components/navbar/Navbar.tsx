@@ -77,8 +77,6 @@ export const Navbar: FC<ItemsMenuProps> = ({
                   <Typography variant="h5" component="h2">Aspiazu Tecnology</Typography>
                 </NextLink>
               </Grid>
-              {/* TODO: colocar en active el item del menu que corresponda con la pagina
-              donde se encuentre el usuario */}
               <Grid 
                 item 
                 md={6} 

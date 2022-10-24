@@ -53,7 +53,7 @@ export const PlantillaLayoutEs: FC<MetaProps> = ({ children, title, contentPage 
           serviceThree={'E-Commerce'}
           linkServiceThree={'/es/servicios/servicio-tres'}
           btnLanguage={'es'}
-          linkBtnLanguage={'/es'}
+          linkBtnLanguage={'/'}
         />
         
         <Container sx={{ mt: 9, mb: 5 }}>
