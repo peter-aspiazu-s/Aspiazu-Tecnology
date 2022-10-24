@@ -11,23 +11,25 @@ interface FooterProps {
 
 export const ContactSocialMedia: FC<FooterProps> = ({ contactUs }) => {
   return (
-    <>
+    <>  
         <Button 
             variant="contained" 
             size="large" 
             fullWidth 
             color="secondary"
             sx={{mb: 3}}
+            href="https://walink.co/5e72b8"
+            target="_blank"
         >
             {contactUs}
         </Button>
-        <IconButton color="secondary">
+        <IconButton color="secondary" href="https://www.facebook.com/profile.php?id=100083073915723" target="_blank">
             <FacebookIcon />
         </IconButton>
-        <IconButton color="secondary">
+        <IconButton color="secondary" href="https://instagram.com/paspiazus?igshid=YmMyMTA2M2Y=" target="_blank">
             <InstagramIcon />
         </IconButton>
-        <IconButton color="secondary">
+        <IconButton color="secondary" href="https://twitter.com/AspiazuPeter" target="_blank">
             <TwitterIcon />
         </IconButton>
         <IconButton color="secondary">
