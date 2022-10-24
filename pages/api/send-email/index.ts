@@ -8,7 +8,7 @@ type Data = {
 
 // TODO: si está implementando la aplicación en un sitio en vivo, ¡recuerde incluir su contraseña como una variable de entorno!
 
-export default function handler(req: NextApiRequest, res: NextApiResponse<Data>) {
+export default async function handler(req: NextApiRequest, res: NextApiResponse<Data>) {
     // if(req.body.name.trim().length === 0) res.status(400).json({message: 'peto la app'})
     // if(req.body.email.trim().length === 0) throw new Error('email is required')
     // if(req.body.message.trim().length < 10) throw new Error('The message is required and must have a minimum of 10 letters')
@@ -24,6 +24,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse<Data>)
                 pass: password,
             },
             secure: true,
+            tls: {
+                rejectUnauthorized: false
+            }
         })
         
         const mailData = {
@@ -34,7 +37,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse<Data>)
             html: `<div>${req.body.message}</div><p>Sent from: ${req.body.email}</p>`
         }
     
-        transporter.sendMail(mailData, (err: string, info: {}) => {
+        await transporter.sendMail(mailData, (err: string, info: {}) => {
             if(err){
                 console.log(err)
             } else{
