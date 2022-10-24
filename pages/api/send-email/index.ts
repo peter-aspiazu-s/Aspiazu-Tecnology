@@ -3,7 +3,7 @@ require('dotenv').config()
 
 
 type Data = {
-    message: string
+    message: {}
 }
 
 // TODO: si está implementando la aplicación en un sitio en vivo, ¡recuerde incluir su contraseña como una variable de entorno!
@@ -45,7 +45,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
             }
         })
     
-        res.status(200).json({ message: 'ok' })
+        res.status(200).json({ message: mailData })
     } catch (error) {
         console.log(error)
     }
