@@ -4,7 +4,7 @@ import { SlideHome } from '../../components/slides'
 
 const HomePage: NextPage = () => {
   return (
-    <PlantillaLayoutEs title={'Plantilla 1 - Home'} contentPage={'Plantilla 1 para agilizar el desarrollo de los sitios web'}>
+    <PlantillaLayoutEs title={'Aspiazu Tecnology - Home'} contentPage={'Creamos sitios web adaptables, hacemos trabajos de diseño gráfico y vendemos software de e-commerce'}>
       <SlideHome 
         titleSlide1={'Construcción de sitios web'}
         servicePath1={'/es/servicios/servicio-uno'}

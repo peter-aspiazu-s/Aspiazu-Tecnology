@@ -1,6 +1,5 @@
 import React, { FC, ReactNode, useState } from 'react'
 import Head from 'next/head'
-import { Container } from '@mui/material';
 import { Sidebar, Navbar } from '../navbar';
 import { Footer } from '../footer';
 
@@ -55,11 +54,9 @@ export const PlantillaLayout: FC<MetaProps> = ({ children, title, contentPage })
           btnLanguage={'es'}
           linkBtnLanguage={'/es'}
         />
-        
-        <Container sx={{ mt: 9, mb: 5 }}>
-            {children}
-        </Container>
 
+        {children}
+        
         <Footer 
           presentCompany={'It is a company dedicated to the creation of web applications, using reliable technologies such as NextJS, Material UI, CSS, React, Node, Mongo, Express, JWT, SQL'}
           titleItems={'Pages'}
