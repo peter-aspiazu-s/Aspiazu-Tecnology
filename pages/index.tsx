@@ -1,17 +1,21 @@
 import type { NextPage } from 'next'
 import { Typography } from '@mui/material'
 import { PlantillaLayout } from '../components/layout'
+import { SlideHome } from '../components/slides'
 
 const HomePage: NextPage = () => {
 
   return (
-    <PlantillaLayout title={'Plantilla 1 - Home'} contentPage={'Plantilla 1 para agilizar el desarrollo de los sitios web'}>
-      <Typography variant="h5" sx={{color:'text.disabled'}}>Plantilla 1 - Home</Typography>
-      <Typography variant="body1" sx={{color:'text.disabled'}}>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero exercitationem repellat delectus ducimus ea doloremque beatae autem eos illo, iste dicta quibusdam cum numquam enim facilis ratione vel eveniet eum!</Typography>
-      <Typography variant="body1" sx={{color:'text.disabled'}}>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero exercitationem repellat delectus ducimus ea doloremque beatae autem eos illo, iste dicta quibusdam cum numquam enim facilis ratione vel eveniet eum!</Typography>
-      <Typography variant="body1" sx={{color:'text.disabled'}}>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero exercitationem repellat delectus ducimus ea doloremque beatae autem eos illo, iste dicta quibusdam cum numquam enim facilis ratione vel eveniet eum!</Typography>
-      <Typography variant="body1" sx={{color:'text.disabled'}}>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero exercitationem repellat delectus ducimus ea doloremque beatae autem eos illo, iste dicta quibusdam cum numquam enim facilis ratione vel eveniet eum!</Typography>
-      <Typography variant="body1" sx={{color:'text.disabled'}}>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero exercitationem repellat delectus ducimus ea doloremque beatae autem eos illo, iste dicta quibusdam cum numquam enim facilis ratione vel eveniet eum!</Typography>
+    <PlantillaLayout title={'Aspiazu Tecnology - Home'} contentPage={'Creadores de sitios web'}>
+      <SlideHome 
+        titleSlide1={'Website construction'}
+        servicePath1={'/services/service-one'}
+        titleSlide2={'Graphic design jobs'}
+        servicePath2={'/services/service-two'}
+        titleSlide3={'E-commerce software'}
+        servicePath3={'/services/service-three'}
+        start={'Start'}
+      />
     </PlantillaLayout>
   )
 }

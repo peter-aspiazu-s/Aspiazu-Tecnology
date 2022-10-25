@@ -73,8 +73,8 @@ export const Navbar: FC<ItemsMenuProps> = ({
         <Toolbar>
             <Grid container>
               <Grid item xs={10} sm={9} md={4}>
-                <NextLink href={linkHome} passHref style={{ cursor: 'pointer' }}>
-                  <Typography variant="h5" component="h2">Aspiazu Tecnology</Typography>
+                <NextLink href={linkHome} passHref>
+                  <Typography variant="h5" component="h2" sx={{cursor: 'pointer'}}>Aspiazu Tecnology</Typography>
                 </NextLink>
               </Grid>
               <Grid 
