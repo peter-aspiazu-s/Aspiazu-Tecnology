@@ -81,7 +81,7 @@ export const Sidebar: FC<ItemsMenuProps> = ({
                         </Grid>
                         <Grid item xs={4} sx={{display: {xs: 'flex', sm: 'none'}, justifyContent: 'center'}}>
                             <NextLink href={linkBtnLanguage}>
-                                <Button onClick={ closeSideMenu } variant="contained" color="secondary">
+                                <Button variant="contained" color="secondary">
                                     {btnSidebarLanguage}
                                 </Button>
                             </NextLink>
