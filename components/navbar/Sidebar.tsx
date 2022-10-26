@@ -1,5 +1,6 @@
 import React, { FC, useContext } from 'react'
 import NextLink from 'next/link';
+import Image from 'next/image';
 import { 
     Drawer, 
     Box, 
@@ -21,6 +22,9 @@ import LightModeIcon from '@mui/icons-material/LightMode';
 import NightlightIcon from '@mui/icons-material/Nightlight';
 import { UiContext } from '../../context';
 
+import ImageEnglish from '../../public/images/english.webp'
+import ImageSpanish from '../../public/images/spanish.webp'
+
 interface ItemsMenuProps {
     home: string;
     linkHome: string;
@@ -35,7 +39,6 @@ interface ItemsMenuProps {
     linkServiceTwo: string;
     serviceThree: string;
     linkServiceThree: string;
-    btnSidebarLanguage: string;
     linkBtnLanguage: string;
   }
 
@@ -53,14 +56,18 @@ export const Sidebar: FC<ItemsMenuProps> = ({
     linkServiceTwo,
     serviceThree,
     linkServiceThree,
-    btnSidebarLanguage,
     linkBtnLanguage,
 }) => {
 
-    const { sidemenuOpen, closeSideMenu, handleModeTheme, modeTheme } = useContext(UiContext)
+    const { sidemenuOpen, closeSideMenu, handleModeTheme, modeTheme, language, handleLanguage } = useContext(UiContext)
 
     const handleDispatchFunctions = () => {
         handleModeTheme()
+        closeSideMenu()
+    }
+
+    const handleDispatchFunctionsLanguage = () => {
+        handleLanguage()
         closeSideMenu()
     }
 
@@ -81,8 +88,12 @@ export const Sidebar: FC<ItemsMenuProps> = ({
                         </Grid>
                         <Grid item xs={4} sx={{display: {xs: 'flex', sm: 'none'}, justifyContent: 'center'}}>
                             <NextLink href={linkBtnLanguage}>
-                                <Button variant="contained" color="secondary">
-                                    {btnSidebarLanguage}
+                                <Button color="secondary" onClick={handleDispatchFunctionsLanguage}>
+                                {
+                                    language 
+                                    ? <Image src={ImageSpanish} width={50} height={30} />
+                                    : <Image src={ImageEnglish} width={50} height={30} />
+                                }
                                 </Button>
                             </NextLink>
                         </Grid>

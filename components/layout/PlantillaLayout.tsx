@@ -34,7 +34,6 @@ export const PlantillaLayout: FC<MetaProps> = ({ children, title, contentPage })
           linkServiceTwo={'/services/service-two'}
           serviceThree={'E-Commerce'}
           linkServiceThree={'/services/service-three'}
-          btnLanguage={'es'}
           linkBtnLanguage={'/es'}
         />
         <Sidebar 
@@ -51,7 +50,6 @@ export const PlantillaLayout: FC<MetaProps> = ({ children, title, contentPage })
           linkServiceTwo={'/services/service-two'}
           serviceThree={'E-Commerce'}
           linkServiceThree={'/services/service-three'}
-          btnSidebarLanguage={'es'}
           linkBtnLanguage={'/es'}
         />
 

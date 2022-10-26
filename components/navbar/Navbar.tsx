@@ -1,5 +1,6 @@
 import React, { FC, useState, MouseEvent, useContext } from 'react'
 import NextLink from 'next/link';
+import Image from 'next/image';
 import { 
   AppBar, 
   Toolbar, 
@@ -18,6 +19,9 @@ import NightlightIcon from '@mui/icons-material/Nightlight';
 import MenuIcon from '@mui/icons-material/Menu';
 import { UiContext } from '../../context';
 
+import ImageEnglish from '../../public/images/english.webp'
+import ImageSpanish from '../../public/images/spanish.webp'
+
 interface ItemsMenuProps {
   home: string;
   linkHome: string;
@@ -32,7 +36,6 @@ interface ItemsMenuProps {
   linkServiceTwo: string;
   serviceThree: string;
   linkServiceThree: string;
-  btnLanguage: string;
   linkBtnLanguage: string;
 }
 
@@ -50,11 +53,10 @@ export const Navbar: FC<ItemsMenuProps> = ({
   linkServiceTwo,
   serviceThree,
   linkServiceThree,
-  btnLanguage,
   linkBtnLanguage,
 }) => {
 
-  const { pathname, openSideMenu, handleModeTheme, modeTheme } = useContext( UiContext )
+  const { pathname, openSideMenu, handleModeTheme, modeTheme, language, handleLanguage } = useContext( UiContext )
   
   const [ anchorEl, setAnchorEl ] = useState<null | HTMLElement>(null)
 
@@ -156,8 +158,12 @@ export const Navbar: FC<ItemsMenuProps> = ({
               </Grid>
               <Grid item sm={1} sx={{ display: {xs: 'none', sm: 'flex'}, justifyContent: 'end' }}>
                 <NextLink href={linkBtnLanguage}>
-                  <Button variant="contained" color="secondary">
-                    {btnLanguage}
+                  <Button color="secondary" onClick={handleLanguage}>
+                    {
+                      language 
+                      ? <Image src={ImageSpanish} width={50} height={30} />
+                      : <Image src={ImageEnglish} width={50} height={30} />
+                    }
                   </Button>
                 </NextLink>
               </Grid>
