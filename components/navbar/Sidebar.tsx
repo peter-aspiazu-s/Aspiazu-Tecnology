@@ -35,7 +35,7 @@ interface ItemsMenuProps {
     linkServiceTwo: string;
     serviceThree: string;
     linkServiceThree: string;
-    btnLanguage: string;
+    btnSidebarLanguage: string;
     linkBtnLanguage: string;
   }
 
@@ -53,7 +53,7 @@ export const Sidebar: FC<ItemsMenuProps> = ({
     linkServiceTwo,
     serviceThree,
     linkServiceThree,
-    btnLanguage,
+    btnSidebarLanguage,
     linkBtnLanguage,
 }) => {
 
@@ -82,7 +82,7 @@ export const Sidebar: FC<ItemsMenuProps> = ({
                         <Grid item xs={4} sx={{display: {xs: 'flex', sm: 'none'}, justifyContent: 'center'}}>
                             <NextLink href={linkBtnLanguage}>
                                 <Button onClick={ closeSideMenu } variant="contained" color="secondary">
-                                    {btnLanguage}
+                                    {btnSidebarLanguage}
                                 </Button>
                             </NextLink>
                         </Grid>
