@@ -10,6 +10,7 @@ export const lightTheme = createTheme({
         // },
         primary: {
             main: blueGrey[900],
+            light: blueGrey['A100'],
         },
         secondary: {
             main: red[800],
@@ -25,8 +26,8 @@ export const lightTheme = createTheme({
         },
         // divider: red[800],
         background: {
-            paper: blueGrey[50],
-            default: blueGrey['A100'],
+            paper: blueGrey['A100'],
+            default: blueGrey[50],
         },
         // action: {
         //     active: blueGrey[50],

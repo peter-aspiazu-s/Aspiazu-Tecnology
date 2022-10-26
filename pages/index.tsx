@@ -2,6 +2,7 @@ import type { NextPage } from 'next'
 import { Typography, Container, Box } from '@mui/material'
 import { PlantillaLayout } from '../components/layout'
 import { SlideHome } from '../components/slides'
+import { Technologies } from '../components/technologies'
 
 const HomePage: NextPage = () => {
 
@@ -21,9 +22,14 @@ const HomePage: NextPage = () => {
           start={'Start'}
         />
       </Box>
-      <Container sx={{ mt: 9, mb: 5 }}>
-        <Typography>Hola mundo</Typography>
-      </Container>
+      <Box sx={{mt: -1, mb: 5, py:3, backgroundColor: 'primary.light'}}>
+        <Container>
+          <Technologies
+            technologiesTitle={'Technologies'}
+            technologiesSubTitle={'Web development and graphic design technologies'}
+          />
+        </Container>
+      </Box>
     </PlantillaLayout>
   )
 }

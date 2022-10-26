@@ -1,7 +1,8 @@
 import type { NextPage } from 'next'
-import { Box } from '@mui/material'
+import { Box, Container } from '@mui/material'
 import { PlantillaLayoutEs } from '../../components/layout'
 import { SlideHome } from '../../components/slides'
+import { Technologies } from '../../components/technologies'
 
 const HomePage: NextPage = () => {
   return (
@@ -19,6 +20,14 @@ const HomePage: NextPage = () => {
           servicePath3={'/es/servicios/servicio-tres'}
           start={'Empezar'}
         />
+      </Box>
+      <Box sx={{mt: -1, mb: 5, py:3, backgroundColor: 'primary.light'}}>
+        <Container>
+          <Technologies
+            technologiesTitle={'Tecnologías'}
+            technologiesSubTitle={'Tecnologías de desarrollo web y diseño gráfico'}
+          />
+        </Container>
       </Box>
     </PlantillaLayoutEs>
   )
