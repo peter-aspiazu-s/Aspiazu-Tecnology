@@ -10,10 +10,13 @@ const HomePage: NextPage = () => {
       <Box sx={{mt: {xs: 5, sm: 7, md: 8}}}>
         <SlideHome 
           titleSlide1={'Website construction'}
+          descriptionService1={'We create your website with the best technologies for the web'}
           servicePath1={'/services/service-one'}
           titleSlide2={'Graphic design jobs'}
+          descriptionService2={'We do graphic design work using tools such as photoshop, illustrator, figma, etc.'}
           servicePath2={'/services/service-two'}
           titleSlide3={'E-commerce software'}
+          descriptionService3={'We develop your E-commerce that accepts payments nationally and internationally'}
           servicePath3={'/services/service-three'}
           start={'Start'}
         />

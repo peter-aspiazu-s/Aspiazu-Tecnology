@@ -1,19 +1,25 @@
 import type { NextPage } from 'next'
+import { Box } from '@mui/material'
 import { PlantillaLayoutEs } from '../../components/layout'
 import { SlideHome } from '../../components/slides'
 
 const HomePage: NextPage = () => {
   return (
     <PlantillaLayoutEs title={'Aspiazu Tecnology - Home'} contentPage={'Creamos sitios web adaptables, hacemos trabajos de diseño gráfico y vendemos software de e-commerce'}>
-      <SlideHome 
-        titleSlide1={'Construcción de sitios web'}
-        servicePath1={'/es/servicios/servicio-uno'}
-        titleSlide2={'Trabajos de diseño gráfico'}
-        servicePath2={'/es/servicios/servicio-dos'}
-        titleSlide3={'Software de E-Commerce'}
-        servicePath3={'/es/servicios/servicio-tres'}
-        start={'Empezar'}
-      />
+      <Box sx={{mt: {xs: 5, sm: 7, md: 8}}}>
+        <SlideHome 
+          titleSlide1={'Construcción de sitios web'}
+          descriptionService1={'Creamos tu sitio web con las mejores tecnologías para la web'}
+          servicePath1={'/es/servicios/servicio-uno'}
+          titleSlide2={'Trabajos de diseño gráfico'}
+          descriptionService2={'Hacemos trabajos de diseño gráfico utilizando herramientas como photoshop, ilustrator, figma, etc'}
+          servicePath2={'/es/servicios/servicio-dos'}
+          titleSlide3={'Software de E-Commerce'}
+          descriptionService3={'Desarrollamos tu Tienda en Línea que acepte pagos a nivel nacional e internacional'}
+          servicePath3={'/es/servicios/servicio-tres'}
+          start={'Empezar'}
+        />
+      </Box>
     </PlantillaLayoutEs>
   )
 }

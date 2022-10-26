@@ -56,10 +56,8 @@ export const PlantillaLayoutEs: FC<MetaProps> = ({ children, title, contentPage 
           linkBtnLanguage={'/'}
         />
         
-        <Container sx={{ mt: 9, mb: 5 }}>
-            {children}
-        </Container>
-
+        {children}
+        
         <Footer
           presentCompany={'Es un empresa dedicada a la creación de aplicaciónes web, usando tecnologías de confianza como NextJS, Material UI, CSS, React, Node, Mongo, Express, JWT, SQL'}
           titleItems={'Páginas'}
