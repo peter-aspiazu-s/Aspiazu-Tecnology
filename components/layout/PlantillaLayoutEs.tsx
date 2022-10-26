@@ -52,7 +52,7 @@ export const PlantillaLayoutEs: FC<MetaProps> = ({ children, title, contentPage 
           linkServiceTwo={'/es/servicios/servicio-dos'}
           serviceThree={'E-Commerce'}
           linkServiceThree={'/es/servicios/servicio-tres'}
-          btnLanguage={'es'}
+          btnLanguage={'en'}
           linkBtnLanguage={'/'}
         />
         
