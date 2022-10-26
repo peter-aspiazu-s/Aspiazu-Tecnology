@@ -33,14 +33,9 @@ export const UiProvider: FC<Props> = ({children}) => {
     const closeSideMenu = () => dispatch({ type: 'UI - Close Sidebar' })
     
     const [ modeTheme, setModeTheme ] = useState(false)
-    const [ language, setLanguage ] = useState(false)
     
     const handleModeTheme = () => {
         setModeTheme(!modeTheme)
-    }
-
-    const handleLanguage = () => {
-        setLanguage(!language)
     }
 
     return (
@@ -49,13 +44,11 @@ export const UiProvider: FC<Props> = ({children}) => {
                 pathname,
                 ...state,
                 modeTheme,
-                language,
 
                 // Methods
                 closeSideMenu,
                 openSideMenu,
                 handleModeTheme,
-                handleLanguage,
             }}
         >
             <ThemeProvider theme={ modeTheme ? darkTheme : lightTheme }>

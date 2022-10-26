@@ -59,15 +59,10 @@ export const Sidebar: FC<ItemsMenuProps> = ({
     linkBtnLanguage,
 }) => {
 
-    const { sidemenuOpen, closeSideMenu, handleModeTheme, modeTheme, language, handleLanguage } = useContext(UiContext)
+    const { pathname, sidemenuOpen, closeSideMenu, handleModeTheme, modeTheme } = useContext(UiContext)
 
     const handleDispatchFunctions = () => {
         handleModeTheme()
-        closeSideMenu()
-    }
-
-    const handleDispatchFunctionsLanguage = () => {
-        handleLanguage()
         closeSideMenu()
     }
 
@@ -88,11 +83,11 @@ export const Sidebar: FC<ItemsMenuProps> = ({
                         </Grid>
                         <Grid item xs={4} sx={{display: {xs: 'flex', sm: 'none'}, justifyContent: 'center'}}>
                             <NextLink href={linkBtnLanguage}>
-                                <Button color="secondary" onClick={handleDispatchFunctionsLanguage}>
+                                <Button color="secondary" onClick={closeSideMenu}>
                                 {
-                                    language 
-                                    ? <Image src={ImageSpanish} width={50} height={30} />
-                                    : <Image src={ImageEnglish} width={50} height={30} />
+                                    pathname.includes('/es')  
+                                    ? <Image src={ImageEnglish} width={50} height={30} />
+                                    : <Image src={ImageSpanish} width={50} height={30} />
                                 }
                                 </Button>
                             </NextLink>

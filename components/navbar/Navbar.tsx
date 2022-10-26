@@ -56,7 +56,7 @@ export const Navbar: FC<ItemsMenuProps> = ({
   linkBtnLanguage,
 }) => {
 
-  const { pathname, openSideMenu, handleModeTheme, modeTheme, language, handleLanguage } = useContext( UiContext )
+  const { pathname, openSideMenu, handleModeTheme, modeTheme } = useContext( UiContext )
   
   const [ anchorEl, setAnchorEl ] = useState<null | HTMLElement>(null)
 
@@ -83,7 +83,6 @@ export const Navbar: FC<ItemsMenuProps> = ({
                 item 
                 md={6} 
                 sx={{ display: { xs: 'none', md:'flex' }, justifyContent: 'end' }}>
-                {/* TODO: cambiar el color de los item del menu desktop */}
                 <Stack spacing={1} direction="row">
                   <NextLink href={linkHome} passHref>
                     <Button variant={ pathname === linkHome ? "contained" : "text" } color="secondary">
@@ -158,11 +157,11 @@ export const Navbar: FC<ItemsMenuProps> = ({
               </Grid>
               <Grid item sm={1} sx={{ display: {xs: 'none', sm: 'flex'}, justifyContent: 'end' }}>
                 <NextLink href={linkBtnLanguage}>
-                  <Button color="secondary" onClick={handleLanguage}>
+                  <Button color="secondary">
                     {
-                      language 
-                      ? <Image src={ImageSpanish} width={50} height={30} />
-                      : <Image src={ImageEnglish} width={50} height={30} />
+                      pathname.includes('/es') 
+                      ? <Image src={ImageEnglish} width={50} height={30} />
+                      : <Image src={ImageSpanish} width={50} height={30} />
                     }
                   </Button>
                 </NextLink>
