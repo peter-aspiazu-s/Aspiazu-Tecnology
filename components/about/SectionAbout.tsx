@@ -10,12 +10,14 @@ interface SectionAboutProps {
     aboutTitle: string;
     aboutSemiDescription: string;
     aboutVisitBTN:string;
+    aboutLinkBtn: string;
 }
 
 export const SectionAbout: FC<SectionAboutProps> = ({
     aboutTitle,
     aboutSemiDescription,
     aboutVisitBTN,
+    aboutLinkBtn,
 }) => {
   return (
     <Grid container>
@@ -41,7 +43,7 @@ export const SectionAbout: FC<SectionAboutProps> = ({
             >
                 <Typography sx={{fontSize: {xs:'25px', sm:'40px', md:'50px'}, mb: {xs: 1, sm: 3, md: 3, lg: 4}}} component="h3">{aboutTitle}</Typography>
                 <Typography sx={{fontSize: {xs:'16px', sm:'18px'}, mb: {xs: 2, sm: 3, md: 3, lg: 4}, textAlign:{xs:'center', md:'left'}}} component="p">{aboutSemiDescription}</Typography>
-                <NextLink href={'/about'} passHref>
+                <NextLink href={aboutLinkBtn} passHref>
                     <Button variant="contained" color="secondary" size={'large'} sx={{fontSize: {xs:'14px'}}}>{aboutVisitBTN}</Button>
                 </NextLink>
             </Box>

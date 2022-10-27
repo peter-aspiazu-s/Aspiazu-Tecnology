@@ -5,6 +5,8 @@ import { SlideHome } from '../../components/slides'
 import { Technologies } from '../../components/technologies'
 import { Testimonials } from '../../components/testimonials'
 import { SectionAbout } from '../../components/about'
+import { ServiceSection } from '../../components/service'
+import { SectionContact } from '../../components/contact'
 
 const HomePage: NextPage = () => {
   return (
@@ -45,6 +47,33 @@ const HomePage: NextPage = () => {
           aboutTitle={'Sobre Nosotros'}
           aboutSemiDescription={'Es una empresa dedicada a la creación de aplicaciones web...'}
           aboutVisitBTN={'Visitar Página'}
+          aboutLinkBtn={'/es/nosotros'}
+        />
+      </Box>
+      <Box sx={{py: 5}}>
+        <Container>
+          <ServiceSection
+            serviceSectionTitle={'Servicios'}
+            service1Title={'Construcción de Sitios Web'}
+            service1Description={'Creamos tu sitio web con las mejores tecnologías para la web...'}
+            service1Link={'/es/servicios/servicio-uno'}
+            service2Title={'Trabajos de diseño gráfico'}
+            service2Description={'Hacemos trabajos de diseño gráfico utilizando herramientas como...'}
+            service2Link={'/es/servicios/servicio-dos'}
+            service3Title={'Software de E-Commerce'}
+            service3Description={'Desarrollamos tu Tienda en Línea que acepte pagos a nivel nacional e...'}
+            service3Link={'/es/servicios/servicio-tres'}
+            textBtn={'Visitar Página'}
+          />
+        </Container>
+      </Box>
+
+      <Box sx={{mb: -1, height: 'auto', position: 'relative'}}>
+        <SectionContact 
+          contactTitle={'Contáctanos'}
+          contactSemiDescription={'Revisa las diferentes formas de contactarnos...'}
+          contactVisitBTN={'Visitar Página'}
+          contactLinkBtn={'/es/contacto'}
         />
       </Box>
     </PlantillaLayoutEs>
