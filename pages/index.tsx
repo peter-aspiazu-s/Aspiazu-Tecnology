@@ -4,6 +4,7 @@ import { PlantillaLayout } from '../components/layout'
 import { SlideHome } from '../components/slides'
 import { Technologies } from '../components/technologies'
 import { Testimonials } from '../components/testimonials'
+import { SectionAbout } from '../components/about'
 
 const HomePage: NextPage = () => {
 
@@ -38,6 +39,13 @@ const HomePage: NextPage = () => {
           nameClient1={'Andres Contreras'}
           clientTestimonial2={`"At first I wasn't very convinced about buying a website, but after knowing all the benefits I decided and hired Peter to help me with the work and I was very satisfied with the service."`}
           nameClient2={'Jefferson Ortega'}
+        />
+      </Box>
+      <Box sx={{mb: -1, height: 'auto', position: 'relative'}}>
+        <SectionAbout 
+          aboutTitle={'About Us'}
+          aboutSemiDescription={'It is a company dedicated to the creation of web applications...'}
+          aboutVisitBTN={'Visit The Page'}
         />
       </Box>
     </PlantillaLayout>

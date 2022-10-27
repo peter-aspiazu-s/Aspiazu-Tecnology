@@ -4,6 +4,7 @@ import { PlantillaLayoutEs } from '../../components/layout'
 import { SlideHome } from '../../components/slides'
 import { Technologies } from '../../components/technologies'
 import { Testimonials } from '../../components/testimonials'
+import { SectionAbout } from '../../components/about'
 
 const HomePage: NextPage = () => {
   return (
@@ -37,6 +38,13 @@ const HomePage: NextPage = () => {
           nameClient1={'Andres Contreras'}
           clientTestimonial2={`"Al inicio no estaba muy convencido de adquirir un sitio web, pero luego de conocer todo lo beneficios me decidí y contrate a Peter para que me ayudará con el trabajo y quedé muy satisfecho con el servicio."`}
           nameClient2={'Jefferson Ortega'}
+        />
+      </Box>
+      <Box sx={{mb: -1, height: 'auto', position: 'relative'}}>
+        <SectionAbout 
+          aboutTitle={'Sobre Nosotros'}
+          aboutSemiDescription={'Es una empresa dedicada a la creación de aplicaciones web...'}
+          aboutVisitBTN={'Visitar Página'}
         />
       </Box>
     </PlantillaLayoutEs>

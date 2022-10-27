@@ -24,10 +24,10 @@ export const Technologies: FC<TechnologiesProps> = ({technologiesTitle, technolo
   return (
     <Grid container sx={{justifyContent:{md:'center'}, px: {xs: 3, sm: 10, md:10}}} spacing={2}>
         <Grid item xs={12}>
-            <Typography variant="h5" component='h5' sx={{color:'text.disabled', textAlign:{xs: 'center', lg: 'left'}}}>{technologiesTitle}</Typography>
+            <Typography component='h5' sx={{fontSize: {xs:'25px', sm:'40px', md:'50px'}, color:'text.disabled', textAlign:{xs: 'center', lg: 'left'}}}>{technologiesTitle}</Typography>
         </Grid>
         <Grid item xs={12}>
-            <Typography variant="subtitle1" component='p' sx={{color:'text.disabled', textAlign:{xs: 'center', lg: 'left'}}}>{technologiesSubTitle}</Typography>
+            <Typography component='p' sx={{fontSize: {xs:'16px', sm:'18px'}, color:'text.disabled', textAlign:{xs: 'center', lg: 'left'}}}>{technologiesSubTitle}</Typography>
         </Grid>
         <Grid item xs={2} sm={2} lg={2} sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
             <Image src={TecnologyHtml} width={60} height={60} />

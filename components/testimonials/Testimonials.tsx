@@ -30,7 +30,7 @@ export const Testimonials: FC<TestimonialsProps> = ({
   return (
     <Grid container>
         <Grid item xs={12} sx={{textAlign: 'center', mb: 3}}>
-            <Typography variant="h4" component="h4" sx={{color: 'text.disabled'}}>{testimonialsTitle}</Typography>
+            <Typography component="h4" sx={{color: 'text.disabled', fontSize: {xs:'25px', sm:'40px', md:'50px'}}}>{testimonialsTitle}</Typography>
         </Grid>
         <Grid item xs={12}>
             <Swiper
@@ -50,7 +50,7 @@ export const Testimonials: FC<TestimonialsProps> = ({
                             <Image src={TechnologyCss} />
                         </Grid>
                         <Grid item xs={12} md={9} lg={8} sx={{display: 'flex', textAlign: {md:'left'}, flexDirection: 'column', justifyContent: 'center', alignItems:{md:'start'}}}>
-                            <Typography sx={{color: 'text.disabled', fontSize: {xs: '16px', sm: '18px', md:'20px'}, mb:{xs:2}}} component="p">{clientTestimonial1}</Typography>
+                            <Typography sx={{color: 'text.disabled', fontSize: {xs:'16px', sm:'18px', lg: '20px'}, mb:{xs:2}}} component="p">{clientTestimonial1}</Typography>
                             <Typography sx={{color: 'text.disabled'}} variant="body1" component="p">{nameClient1}.</Typography>
                         </Grid>
                     </Grid>
@@ -61,7 +61,7 @@ export const Testimonials: FC<TestimonialsProps> = ({
                             <Image src={TechnologyCss} />
                         </Grid>
                         <Grid item xs={12} md={9} lg={8} sx={{display: 'flex', textAlign: {md:'left'}, flexDirection: 'column', justifyContent: 'center', alignItems:{md:'start'}}}>
-                            <Typography sx={{color: 'text.disabled', fontSize: {xs: '16px', sm: '18px', md:'20px'}, mb:{xs:2}}} component="p">{clientTestimonial2}</Typography>
+                            <Typography sx={{color: 'text.disabled', fontSize: {xs: '16px', sm: '18px', lg:'20px'}, mb:{xs:2}}} component="p">{clientTestimonial2}</Typography>
                             <Typography sx={{color: 'text.disabled'}} variant="body1" component="p">{nameClient2}.</Typography>
                         </Grid>
                     </Grid>
