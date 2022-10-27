@@ -3,6 +3,7 @@ import { Box, Container } from '@mui/material'
 import { PlantillaLayoutEs } from '../../components/layout'
 import { SlideHome } from '../../components/slides'
 import { Technologies } from '../../components/technologies'
+import { Testimonials } from '../../components/testimonials'
 
 const HomePage: NextPage = () => {
   return (
@@ -28,6 +29,15 @@ const HomePage: NextPage = () => {
             technologiesSubTitle={'Tecnologías de desarrollo web y diseño gráfico'}
           />
         </Container>
+      </Box>
+      <Box sx={{py: 5}}>
+        <Testimonials
+          testimonialsTitle={'Testimonios de Clientes'}
+          clientTestimonial1={`"Al inicio no estaba muy convencido de adquirir un sitio web, pero luego de conocer todo lo beneficios me decidí y contrate a Peter para que me ayudará con el trabajo y quedé muy satisfecho con el servicio."`}
+          nameClient1={'Andres Contreras'}
+          clientTestimonial2={`"Al inicio no estaba muy convencido de adquirir un sitio web, pero luego de conocer todo lo beneficios me decidí y contrate a Peter para que me ayudará con el trabajo y quedé muy satisfecho con el servicio."`}
+          nameClient2={'Jefferson Ortega'}
+        />
       </Box>
     </PlantillaLayoutEs>
   )

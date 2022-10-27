@@ -3,6 +3,7 @@ import { Typography, Container, Box } from '@mui/material'
 import { PlantillaLayout } from '../components/layout'
 import { SlideHome } from '../components/slides'
 import { Technologies } from '../components/technologies'
+import { Testimonials } from '../components/testimonials'
 
 const HomePage: NextPage = () => {
 
@@ -22,13 +23,22 @@ const HomePage: NextPage = () => {
           start={'Start'}
         />
       </Box>
-      <Box sx={{mt: -1, mb: 5, py:3, backgroundColor: 'primary.light'}}>
+      <Box sx={{mt: -1, py:3, backgroundColor: 'primary.light'}}>
         <Container>
           <Technologies
             technologiesTitle={'Technologies'}
             technologiesSubTitle={'Web development and graphic design technologies'}
           />
         </Container>
+      </Box>
+      <Box sx={{py: 5}}>
+        <Testimonials
+          testimonialsTitle={'Customer Testimonials'}
+          clientTestimonial1={`"At first I wasn't very convinced about buying a website, but after knowing all the benefits I decided and hired Peter to help me with the work and I was very satisfied with the service."`}
+          nameClient1={'Andres Contreras'}
+          clientTestimonial2={`"At first I wasn't very convinced about buying a website, but after knowing all the benefits I decided and hired Peter to help me with the work and I was very satisfied with the service."`}
+          nameClient2={'Jefferson Ortega'}
+        />
       </Box>
     </PlantillaLayout>
   )
