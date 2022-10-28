@@ -29,11 +29,11 @@ export const PlantillaLayout: FC<MetaProps> = ({ children, title, contentPage })
           linkContact={'/contact'}
           services={'Services'}
           serviceOne={'Web Site'}
-          linkServiceOne={'/services/service-one'}
+          linkServiceOne={'/services/web-site'}
           serviceTwo={'Graphic Design'}
-          linkServiceTwo={'/services/service-two'}
+          linkServiceTwo={'/services/graphic-design'}
           serviceThree={'E-Commerce'}
-          linkServiceThree={'/services/service-three'}
+          linkServiceThree={'/services/e-commerce'}
           linkBtnLanguage={'/es'}
         />
         <Sidebar 
@@ -45,11 +45,11 @@ export const PlantillaLayout: FC<MetaProps> = ({ children, title, contentPage })
           linkContact={'/contact'}
           services={'Services'}
           serviceOne={'Web Site'}
-          linkServiceOne={'/services/service-one'}
+          linkServiceOne={'/services/web-site'}
           serviceTwo={'Graphic Design'}
-          linkServiceTwo={'/services/service-two'}
+          linkServiceTwo={'/services/graphic-design'}
           serviceThree={'E-Commerce'}
-          linkServiceThree={'/services/service-three'}
+          linkServiceThree={'/services/e-commerce'}
           linkBtnLanguage={'/es'}
         />
 
@@ -66,11 +66,11 @@ export const PlantillaLayout: FC<MetaProps> = ({ children, title, contentPage })
           linkContact={'/contact'}
           titleItemsServices={'Service Pages'}
           serviceOne={'Web Site'}
-          linkServiceOne={'/services/service-one'}
+          linkServiceOne={'/services/web-site'}
           serviceTwo={'Graphic Design'}
-          linkServiceTwo={'/services/service-two'}
+          linkServiceTwo={'/services/graphic-design'}
           serviceThree={'E-Commerce'}
-          linkServiceThree={'/services/service-three'}
+          linkServiceThree={'/services/e-commerce'}
           contactUs={'Contact Us'}
           legalWarning={'Legal Warning'}
           linkLegalWarning={'/policies'}

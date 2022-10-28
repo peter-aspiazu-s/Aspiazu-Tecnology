@@ -30,11 +30,11 @@ export const PlantillaLayoutEs: FC<MetaProps> = ({ children, title, contentPage 
           linkContact={'/es/contacto'}
           services={'Servicios'}
           serviceOne={'Sitios Web'}
-          linkServiceOne={'/es/servicios/servicio-uno'}
+          linkServiceOne={'/es/servicios/sitio-web'}
           serviceTwo={'Diseño Gráfico'}
-          linkServiceTwo={'/es/servicios/servicio-dos'}
+          linkServiceTwo={'/es/servicios/diseno-grafico'}
           serviceThree={'E-Commerce'}
-          linkServiceThree={'/es/servicios/servicio-tres'}
+          linkServiceThree={'/es/servicios/e-commerce'}
           linkBtnLanguage={'/'}
         />
         <Sidebar 
@@ -46,11 +46,11 @@ export const PlantillaLayoutEs: FC<MetaProps> = ({ children, title, contentPage 
           linkContact={'/es/contacto'}
           services={'Servicios'}
           serviceOne={'Sitios Web'}
-          linkServiceOne={'/es/servicios/servicio-uno'}
+          linkServiceOne={'/es/servicios/sitio-web'}
           serviceTwo={'Diseño Gráfico'}
-          linkServiceTwo={'/es/servicios/servicio-dos'}
+          linkServiceTwo={'/es/servicios/diseno-grafico'}
           serviceThree={'E-Commerce'}
-          linkServiceThree={'/es/servicios/servicio-tres'}
+          linkServiceThree={'/es/servicios/e-commerce'}
           linkBtnLanguage={'/'}
         />
         
@@ -67,11 +67,11 @@ export const PlantillaLayoutEs: FC<MetaProps> = ({ children, title, contentPage 
           linkContact={'/es/contacto'}
           titleItemsServices={'Páginas de Servicios'}
           serviceOne={'Sitio Web'}
-          linkServiceOne={'/es/servicios/servicio-uno'}
+          linkServiceOne={'/es/servicios/sitio-web'}
           serviceTwo={'Diseño Gráfico'}
-          linkServiceTwo={'/es/servicios/servicio-dos'}
+          linkServiceTwo={'/es/servicios/diseno-grafico'}
           serviceThree={'E-Commerce'}
-          linkServiceThree={'/es/servicios/servicio-tres'}
+          linkServiceThree={'/es/servicios/e-commerce'}
           contactUs={'Contáctanos'}
           legalWarning={'Aviso Legal'}
           linkLegalWarning={'/es/politicas'}

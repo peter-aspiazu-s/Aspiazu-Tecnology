@@ -15,13 +15,13 @@ const HomePage: NextPage = () => {
         <SlideHome 
           titleSlide1={'Construcción de sitios web'}
           descriptionService1={'Creamos tu sitio web con las mejores tecnologías para la web'}
-          servicePath1={'/es/servicios/servicio-uno'}
+          servicePath1={'/es/servicios/sitio-web'}
           titleSlide2={'Trabajos de diseño gráfico'}
           descriptionService2={'Hacemos trabajos de diseño gráfico utilizando herramientas como photoshop, ilustrator, figma, etc'}
-          servicePath2={'/es/servicios/servicio-dos'}
+          servicePath2={'/es/servicios/diseno-grafico'}
           titleSlide3={'Software de E-Commerce'}
           descriptionService3={'Desarrollamos tu Tienda en Línea que acepte pagos a nivel nacional e internacional'}
-          servicePath3={'/es/servicios/servicio-tres'}
+          servicePath3={'/es/servicios/e-commerce'}
           start={'Empezar'}
         />
       </Box>
@@ -56,13 +56,13 @@ const HomePage: NextPage = () => {
             serviceSectionTitle={'Servicios'}
             service1Title={'Construcción de Sitios Web'}
             service1Description={'Creamos tu sitio web con las mejores tecnologías para la web...'}
-            service1Link={'/es/servicios/servicio-uno'}
+            service1Link={'/es/servicios/sitio-web'}
             service2Title={'Trabajos de diseño gráfico'}
             service2Description={'Hacemos trabajos de diseño gráfico utilizando herramientas como...'}
-            service2Link={'/es/servicios/servicio-dos'}
+            service2Link={'/es/servicios/diseno-grafico'}
             service3Title={'Software de E-Commerce'}
             service3Description={'Desarrollamos tu Tienda en Línea que acepte pagos a nivel nacional e...'}
-            service3Link={'/es/servicios/servicio-tres'}
+            service3Link={'/es/servicios/e-commerce'}
             textBtn={'Visitar Página'}
           />
         </Container>

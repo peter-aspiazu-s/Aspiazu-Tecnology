@@ -16,13 +16,13 @@ const HomePage: NextPage = () => {
         <SlideHome 
           titleSlide1={'Website construction'}
           descriptionService1={'We create your website with the best technologies for the web'}
-          servicePath1={'/services/service-one'}
+          servicePath1={'/services/web-site'}
           titleSlide2={'Graphic design jobs'}
           descriptionService2={'We do graphic design work using tools such as photoshop, illustrator, figma, etc.'}
-          servicePath2={'/services/service-two'}
+          servicePath2={'/services/graphic-design'}
           titleSlide3={'E-commerce software'}
           descriptionService3={'We develop your E-commerce that accepts payments nationally and internationally'}
-          servicePath3={'/services/service-three'}
+          servicePath3={'/services/e-commerce'}
           start={'Start'}
         />
       </Box>
@@ -58,13 +58,13 @@ const HomePage: NextPage = () => {
             serviceSectionTitle={'Services'}
             service1Title={'Website construction'}
             service1Description={'We create your website with the best technologies for the web...'}
-            service1Link={'/services/service-one'}
+            service1Link={'/services/web-site'}
             service2Title={'Graphic design jobs'}
             service2Description={'We do graphic design work using tools such as photoshop, illustrator...'}
-            service2Link={'/services/service-two'}
+            service2Link={'/services/graphic-design'}
             service3Title={'E-commerce software'}
             service3Description={'We develop your E-commerce that accepts payments nationally and...'}
-            service3Link={'/services/service-three'}
+            service3Link={'/services/e-commerce'}
             textBtn={'Visit The Page'}
           />
         </Container>
