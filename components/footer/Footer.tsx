@@ -39,6 +39,7 @@ interface FooterProps {
     emailErrorMessage: string;
     messageErrorMessage: string;
     warningMessageInput: string;
+    variantForm: string;
 }
 
 export const Footer: FC<FooterProps> = ({
@@ -73,6 +74,7 @@ export const Footer: FC<FooterProps> = ({
     emailErrorMessage,
     messageErrorMessage,
     warningMessageInput,
+    variantForm,
 }) => {
 
   return (
@@ -148,6 +150,7 @@ export const Footer: FC<FooterProps> = ({
                             emailErrorMessage={emailErrorMessage}
                             messageErrorMessage={messageErrorMessage}
                             warningMessageInput={warningMessageInput}
+                            variantForm={variantForm}
                         />
                     </Grid>
                 </Grid>

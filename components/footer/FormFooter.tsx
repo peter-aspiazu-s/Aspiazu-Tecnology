@@ -12,6 +12,7 @@ interface FormProps {
   emailErrorMessage: string;
   messageErrorMessage: string;
   warningMessageInput: string;
+  variantForm: string;
 }
 
 
@@ -28,6 +29,7 @@ export const FormFooter: FC<FormProps> = ({
   emailErrorMessage,
   messageErrorMessage,
   warningMessageInput,
+  variantForm
 }) => {
 
   const [name, setName] = useState('')
@@ -116,7 +118,7 @@ export const FormFooter: FC<FormProps> = ({
           type="text"
           id="name" 
           label={labelName} 
-          variant="standard"
+          variant={variantForm === 'filled' ? 'filled' : 'standard' }
           onChange={(e) => setName(e.target.value)}
           value={name}
           name="name" 
@@ -125,13 +127,13 @@ export const FormFooter: FC<FormProps> = ({
           onBlur={ () => setTouchedName( true ) }
           fullWidth
           // required 
-          sx={{ mb:2 }} 
+          sx={{ mb:2 }}
       />
       <TextField 
           type="email"
           id="email" 
           label={labelEmail} 
-          variant="standard" 
+          variant={variantForm === 'filled' ? 'filled' : 'standard' } 
           onChange={(e) => setEmail(e.target.value)}
           value={email}
           name="email"
@@ -146,7 +148,7 @@ export const FormFooter: FC<FormProps> = ({
           type="text"
           id="message" 
           label={labelComment} 
-          variant="standard" 
+          variant={variantForm === 'filled' ? 'filled' : 'standard' } 
           onChange={(e) => setMessage(e.target.value)}
           value={message}
           name="message" 

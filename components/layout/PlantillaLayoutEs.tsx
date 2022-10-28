@@ -88,6 +88,7 @@ export const PlantillaLayoutEs: FC<MetaProps> = ({ children, title, contentPage 
           emailErrorMessage={'El correo es incorrecto'}
           messageErrorMessage={'El mensaje es requerido y debe tener 10 o más letras'}
           warningMessageInput={'Ingrese un valor'}
+          variantForm={'standard'}
         />
     </>
   )
