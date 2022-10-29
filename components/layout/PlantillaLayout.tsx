@@ -1,7 +1,8 @@
-import React, { FC, ReactNode, useState } from 'react'
+import React, { FC, ReactNode, useContext } from 'react'
 import Head from 'next/head'
 import { Sidebar, Navbar } from '../navbar';
 import { Footer } from '../footer';
+import { UiContext } from '../../context';
 
 type MetaProps = {
     children: ReactNode,
@@ -10,6 +11,8 @@ type MetaProps = {
 }
 
 export const PlantillaLayout: FC<MetaProps> = ({ children, title, contentPage }) => {
+
+  const { pathname } = useContext(UiContext)
 
   return (
     <>
@@ -34,7 +37,23 @@ export const PlantillaLayout: FC<MetaProps> = ({ children, title, contentPage })
           linkServiceTwo={'/services/graphic-design'}
           serviceThree={'E-Commerce'}
           linkServiceThree={'/services/e-commerce'}
-          linkBtnLanguage={'/es'}
+          linkBtnLanguage={
+            pathname === '/'
+            ? '/es'
+            : pathname === '/services/web-site'
+              ? '/es/servicios/sitio-web'
+              : pathname === '/services/graphic-design'
+                ? '/es/servicios/diseno-grafico'
+                : pathname === '/services/e-commerce'
+                  ? '/es/servicios/e-commerce'
+                  : pathname === '/about'
+                    ? '/es/nosotros'
+                    : pathname === '/contact'
+                      ? '/es/contacto'
+                      : pathname === '/policies'
+                        ? '/es/politicas'
+                        : '/es'
+          }
         />
         <Sidebar 
           home={'Home'}
@@ -50,7 +69,23 @@ export const PlantillaLayout: FC<MetaProps> = ({ children, title, contentPage })
           linkServiceTwo={'/services/graphic-design'}
           serviceThree={'E-Commerce'}
           linkServiceThree={'/services/e-commerce'}
-          linkBtnLanguage={'/es'}
+          linkBtnLanguage={
+            pathname === '/'
+            ? '/es'
+            : pathname === '/services/web-site'
+              ? '/es/servicios/sitio-web'
+              : pathname === '/services/graphic-design'
+                ? '/es/servicios/diseno-grafico'
+                : pathname === '/services/e-commerce'
+                  ? '/es/servicios/e-commerce'
+                  : pathname === '/about'
+                    ? '/es/nosotros'
+                    : pathname === '/contact'
+                      ? '/es/contacto'
+                      : pathname === '/policies'
+                        ? '/es/politicas'
+                        : '/es'
+          }
         />
 
         {children}
@@ -87,7 +122,6 @@ export const PlantillaLayout: FC<MetaProps> = ({ children, title, contentPage })
           emailErrorMessage={'The email is incorrect'}
           messageErrorMessage={'The message is required and must have 10 or more letters'}
           warningMessageInput={'Please enter a value'}
-          variantForm={'standard'}
         />
     </>
   )

@@ -1,7 +1,7 @@
 import type { NextPage } from 'next'
 import { Box, Container, Grid, Typography, IconButton } from '@mui/material';
 import { PlantillaLayoutEs } from '../../components/layout'
-import { ContactDirect, ContactHeader } from '../../components/contactPage';
+import { ContactDirect, ContactForm, ContactHeader } from '../../components/contactPage';
 import { FormFooter } from '../../components/footer/FormFooter';
 
 import FacebookIcon from '@mui/icons-material/Facebook';
@@ -27,17 +27,16 @@ const ContactPage: NextPage = () => {
         </Grid>
         <Grid container justifyContent="center" alignItems="center">
           <Grid item xs={12} md={6} sx={{mb:{xs: 5, md: 0}}}>
-            <FormFooter 
-              labelName={'Nombre'}
-              labelEmail={'Correo'}
-              labelComment={'Comentario'}
-              btnSubmit={'Enviar'}
-              warningMessage={'Su mensaje se envió con éxito'}
-              nameErrorMessage={'El nombre es requerido'}
-              emailErrorMessage={'El correo es incorrecto'}
-              messageErrorMessage={'El mensaje es requerido y debe tener 10 o más letras'}
-              warningMessageInput={'Ingrese un valor'}
-              variantForm={'filled'}
+            <ContactForm 
+                labelName={'Nombre'}
+                labelEmail={'Correo'}
+                labelComment={'Mensaje'}
+                btnSubmit={'Enviar'}
+                warningMessage={'Su mensaje se envió con éxito'}
+                nameErrorMessage={'El nombre es requerido'}
+                emailErrorMessage={'El correo es incorrecto'}
+                messageErrorMessage={'El mensaje es requerido y debe tener 10 o más letras'}
+                warningMessageInput={'Ingrese un valor'}
               />
           </Grid>
           <Grid item xs={12} md={6}>

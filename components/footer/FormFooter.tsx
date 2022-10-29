@@ -12,7 +12,6 @@ interface FormProps {
   emailErrorMessage: string;
   messageErrorMessage: string;
   warningMessageInput: string;
-  variantForm: string;
 }
 
 
@@ -29,7 +28,6 @@ export const FormFooter: FC<FormProps> = ({
   emailErrorMessage,
   messageErrorMessage,
   warningMessageInput,
-  variantForm
 }) => {
 
   const [name, setName] = useState('')
@@ -118,7 +116,7 @@ export const FormFooter: FC<FormProps> = ({
           type="text"
           id="name" 
           label={labelName} 
-          variant={variantForm === 'filled' ? 'filled' : 'standard' }
+          variant={'standard'}
           onChange={(e) => setName(e.target.value)}
           value={name}
           name="name" 
@@ -126,14 +124,18 @@ export const FormFooter: FC<FormProps> = ({
           error={ name.length <= 0 && touchedName }
           onBlur={ () => setTouchedName( true ) }
           fullWidth
-          // required 
+          InputLabelProps={{
+            style: {
+                color: '#eceff1'
+            }
+          }}
           sx={{ mb:2 }}
       />
       <TextField 
           type="email"
           id="email" 
           label={labelEmail} 
-          variant={variantForm === 'filled' ? 'filled' : 'standard' } 
+          variant={'standard'} 
           onChange={(e) => setEmail(e.target.value)}
           value={email}
           name="email"
@@ -141,14 +143,18 @@ export const FormFooter: FC<FormProps> = ({
           error={ email.length <= 0 && touchedEmail }
           onBlur={ () => setTouchedEmail( true ) } 
           fullWidth
-          // required 
+          InputLabelProps={{
+            style: {
+                color: '#eceff1'
+            }
+          }}
           sx={{ mb:2 }} 
       />
       <TextField 
           type="text"
           id="message" 
           label={labelComment} 
-          variant={variantForm === 'filled' ? 'filled' : 'standard' } 
+          variant={'standard'} 
           onChange={(e) => setMessage(e.target.value)}
           value={message}
           name="message" 
@@ -158,7 +164,11 @@ export const FormFooter: FC<FormProps> = ({
           multiline
           fullWidth 
           rows={3}
-          // required
+          InputLabelProps={{
+            style: {
+                color: '#eceff1'
+            }
+          }}
           sx={{ mb:2 }} 
       />
       <Button type="submit" variant="contained" fullWidth color="secondary">{btnSubmit}</Button>

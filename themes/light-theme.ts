@@ -1,7 +1,14 @@
-import { createTheme } from "@mui/material";
+import { createTheme, InputLabel } from "@mui/material";
 import { blueGrey, red } from "@mui/material/colors";
 
 export const lightTheme = createTheme({
+    // components: {
+    //     MuiTextField: {
+    //         styleOverrides: {
+    //             root: InputLabel
+    //         }
+    //     },
+    // },
     palette: {
         mode: 'light',
         // common: {
@@ -22,6 +29,8 @@ export const lightTheme = createTheme({
         text: {
             primary: blueGrey[50],
             secondary: blueGrey[50], 
+            // primary: blueGrey[900],
+            // secondary: blueGrey[900], 
             disabled: blueGrey[900],
         },
         // divider: red[800],

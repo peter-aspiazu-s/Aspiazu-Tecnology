@@ -20,7 +20,7 @@ export const ContactDirect: FC<ContactDirectProps> = ({
   return (
     <Grid container justifyContent='center' alignItems='center'>
         <Grid item xs={12} sx={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
-            <Card sx={{ maxWidth: 345, backgroundColor: 'primary.dark', pb: 2 }}>
+            <Card sx={{ width: {xs: '500px', md: '400px', lg: '450px'}, backgroundColor: 'primary.dark', pb: 2 }}>
                 <CardActionArea sx={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center'}}>
                     <PhoneInTalkIcon sx={{fontSize: {xs: '130px', sm: '150px', md: '180px'}}} />
                     <CardContent>
