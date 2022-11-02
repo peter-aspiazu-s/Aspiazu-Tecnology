@@ -2,17 +2,21 @@ import {FC} from 'react'
 import Image from 'next/image';
 import { Box } from '@mui/material';
 
-import SlideHomeEcommerceMobile from '../../public/images/slide-home-ecommerce.webp'
-import SlideHomeEcommerceDesktop from '../../public/images/slide-home-ecommerce2.webp'
+import BannerSlideHomeImgsm from '../../public/images/banner-slide-home-img3-sm.webp'
+import BannerSlideHomeImglg from '../../public/images/banner-slide-home-img3-lg.webp'
+import BannerSlideHomeImgxl from '../../public/images/banner-slide-home-img3-xl.webp'
 
 export const GroupThreeImages: FC = () => {
   return (
     <>
         <Box sx={{display: {xs: 'block', md: 'none'}}}>
-            <Image src={SlideHomeEcommerceMobile} />
+            <Image src={BannerSlideHomeImgsm} />
         </Box>
-        <Box sx={{display: {xs: 'none', md: 'block'}}}>
-            <Image src={SlideHomeEcommerceDesktop} />
+        <Box sx={{display: {xs: 'none', md: 'block', xl: 'none'}}}>
+            <Image src={BannerSlideHomeImglg} />
+        </Box>
+        <Box sx={{display: {xs: 'none', xl: 'block'}}}>
+            <Image src={BannerSlideHomeImgxl} />
         </Box>
     </>
   )

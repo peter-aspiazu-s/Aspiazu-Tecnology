@@ -73,12 +73,12 @@ export const Sidebar: FC<ItemsMenuProps> = ({
             anchor='right'
             sx={{ backdropFilter: 'blur(4px)', transition: 'all 0.5s ease-out' }}
         >
-            <Box sx={{ width: 250, paddingTop: 1, color:'primary.dark' }}>
+            <Box sx={{ width: {xs: 280, sm: 300}, paddingTop: 1, color:'primary.dark' }}>
                 <List>
                     <Grid container alignItems='center'>
                         <Grid item xs={4} sx={{display: 'flex', justifyContent: {xs:'center', sm:'start'}}}>
                             <IconButton onClick={ closeSideMenu } sx={{ color:'text.disabled' }}>
-                                <KeyboardArrowRightIcon fontSize='large' />
+                                <KeyboardArrowRightIcon sx={{fontSize: {xs:'2.4rem', sm:'2.5rem'}}}/>
                             </IconButton>
                         </Grid>
                         <Grid item xs={4} sx={{display: {xs: 'flex', sm: 'none'}, justifyContent: 'center'}}>
@@ -96,8 +96,8 @@ export const Sidebar: FC<ItemsMenuProps> = ({
                             <IconButton color="secondary" onClick={handleDispatchFunctions}>
                             {
                                 modeTheme
-                                ? <LightModeIcon />
-                                : <NightlightIcon />
+                                ? <LightModeIcon sx={{fontSize:'2rem'}} />
+                                : <NightlightIcon sx={{fontSize:'2rem'}} />
                             }
                             </IconButton>
                         </Grid>
@@ -105,34 +105,77 @@ export const Sidebar: FC<ItemsMenuProps> = ({
                     <Divider />
                     <NextLink href={linkHome} passHref>
                         <ListItem button onClick={ closeSideMenu }>
-                            <ListItemText primary={home} sx={{color: 'text.disabled'}} />
+                            <ListItemText 
+                                primary={home} 
+                                sx={{color: 'text.disabled'}}
+                                primaryTypographyProps={{
+                                    style: {
+                                        fontSize: '1rem'
+                                    }
+                                }}
+                            />
                         </ListItem>
                     </NextLink>
                     <Accordion>
                         <AccordionSummary
-                            expandIcon={<ExpandMoreIcon sx={{color:"text.disabled"}} />}
+                            expandIcon={
+                                <ExpandMoreIcon 
+                                    sx={{
+                                        color:"text.disabled",
+                                        fontSize: '1.2rem'
+                                    }} 
+                                />
+                            }
                             aria-controls="panella-content"
                             id="panella-header"
                         >
-                            <Typography sx={{color: 'text.disabled'}}>{services}</Typography>
+                            <Typography 
+                                sx={{
+                                    color: 'text.disabled', 
+                                    fontSize: '1rem'
+                                }}
+                            >
+                                {services}
+                            </Typography>
                         </AccordionSummary>
                         <AccordionDetails sx={{ color:'text.disabled' }}>     
                             <Divider />
                             <NextLink href={linkServiceOne} passHref>
                                 <ListItem button onClick={ closeSideMenu }>
-                                    <ListItemText primary={serviceOne} />
+                                    <ListItemText 
+                                        primary={serviceOne} 
+                                        primaryTypographyProps={{
+                                            style: {
+                                                fontSize: '1rem'
+                                            }
+                                        }}    
+                                    />
                                 </ListItem>
                             </NextLink>
                             <Divider />
                             <NextLink href={linkServiceTwo} passHref>
                                 <ListItem button onClick={ closeSideMenu }>
-                                    <ListItemText primary={serviceTwo} />
+                                    <ListItemText 
+                                        primary={serviceTwo} 
+                                        primaryTypographyProps={{
+                                            style: {
+                                                fontSize: '1rem'
+                                            }
+                                        }}
+                                    />
                                 </ListItem>
                             </NextLink>  
                             <Divider />
                             <NextLink href={linkServiceThree} passHref>
                                 <ListItem button onClick={ closeSideMenu }>
-                                    <ListItemText primary={serviceThree} />
+                                    <ListItemText 
+                                        primary={serviceThree} 
+                                        primaryTypographyProps={{
+                                            style: {
+                                                fontSize: '1rem'
+                                            }
+                                        }}
+                                    />
                                 </ListItem>
                             </NextLink>
                             <Divider />
@@ -140,13 +183,29 @@ export const Sidebar: FC<ItemsMenuProps> = ({
                     </Accordion>
                     <NextLink href={linkAbout} passHref>
                         <ListItem button onClick={ closeSideMenu }>
-                            <ListItemText primary={about} sx={{color: 'text.disabled'}} />
+                            <ListItemText 
+                                primary={about} 
+                                sx={{color: 'text.disabled'}} 
+                                primaryTypographyProps={{
+                                    style: {
+                                        fontSize: '1rem'
+                                    }
+                                }}
+                            />
                         </ListItem>
                     </NextLink>
                     <Divider />
                     <NextLink href={linkContact} passHref>
                         <ListItem button onClick={ closeSideMenu }>
-                            <ListItemText primary={contact} sx={{color: 'text.disabled'}} />
+                            <ListItemText 
+                                primary={contact} 
+                                sx={{color: 'text.disabled'}} 
+                                primaryTypographyProps={{
+                                    style: {
+                                        fontSize: '1rem'
+                                    }
+                                }}
+                            />
                         </ListItem>
                     </NextLink>
                     <Divider />
