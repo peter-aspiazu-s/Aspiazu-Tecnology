@@ -27,11 +27,25 @@ export const PagesItems: FC<FooterProps> = ({
 
   return (
     <>
-        <Typography variant="h6" sx={{ fontWeight: 'bold', mb:2 }}>{titleItems}</Typography>
+        <Typography 
+            sx={{ 
+                fontWeight: 'bold', 
+                mb:2,
+                fontSize:{xs: '1.2rem', sm: '1.3rem', md: '1.4rem', lg: '1.5rem', xl: '1.6rem'} 
+            }}
+        >
+            {titleItems}
+        </Typography>
         <NextLink href={linkHome} passHref>
             <Link 
                 variant="overline" 
-                sx={{ mb:1, display: 'block', color:'text.primary', textDecorationColor:'#90a4ae' }}
+                sx={{ 
+                    mb:1, 
+                    display: 'block', 
+                    color:'text.primary', 
+                    textDecorationColor:'#90a4ae', 
+                    fontSize: {xs:'0.7rem', lg:'0.8rem', xl: '1rem'}
+                }}
                 underline={ pathname === linkHome ? 'always' : 'hover' }
             >
                 {home}
@@ -40,7 +54,13 @@ export const PagesItems: FC<FooterProps> = ({
         <NextLink href={linkAbout} passHref>
             <Link 
                 variant="overline" 
-                sx={{ mb:1, display: 'block', color:'text.primary', textDecorationColor:'#90a4ae' }}
+                sx={{ 
+                    mb:1, 
+                    display: 'block', 
+                    color:'text.primary', 
+                    textDecorationColor:'#90a4ae', 
+                    fontSize: {xs:'0.7rem', lg:'0.8rem', xl: '1rem'}
+                }}
                 underline={ (pathname === linkAbout) ? 'always' : 'hover' }
             >
                 {about}
@@ -49,7 +69,13 @@ export const PagesItems: FC<FooterProps> = ({
         <NextLink href={linkContact} passHref>
         <Link 
             variant="overline" 
-            sx={{ mb:1, display: 'block', color:'text.primary', textDecorationColor:'#90a4ae' }}
+            sx={{ 
+                mb:1, 
+                display: 'block', 
+                color:'text.primary', 
+                textDecorationColor:'#90a4ae',
+                fontSize: {xs:'0.7rem', lg:'0.8rem', xl: '1rem'} 
+            }}
             underline={ (pathname === linkContact) ? 'always' : 'hover' }
         >
             {contact}

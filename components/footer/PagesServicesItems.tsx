@@ -27,11 +27,25 @@ export const PagesServicesItems: FC<FooterProps> = ({
 
   return (
     <>
-        <Typography variant="h6" sx={{ fontWeight: 'bold', mb:2 }}>{titleItemsServices}</Typography>
+        <Typography 
+            sx={{ 
+                fontWeight: 'bold', 
+                mb:2, 
+                fontSize:{xs: '1.2rem', sm: '1.3rem', md: '1.4rem', lg: '1.5rem', xl: '1.6rem'}
+            }}
+        >
+            {titleItemsServices}
+        </Typography>
         <NextLink href={linkServiceOne} passHref>
             <Link 
                 variant="overline" 
-                sx={{ mb:1, display: 'block', color:'text.primary', textDecorationColor:'#90a4ae' }}
+                sx={{ 
+                    mb:1, 
+                    display: 'block', 
+                    color:'text.primary', 
+                    textDecorationColor:'#90a4ae',
+                    fontSize: {xs:'0.7rem', lg:'0.8rem', xl: '1rem'} 
+                }}
                 underline={ (pathname === linkServiceOne) ? 'always' : 'hover' }
             >
                 {serviceOne}
@@ -40,7 +54,13 @@ export const PagesServicesItems: FC<FooterProps> = ({
         <NextLink href={linkServiceTwo} passHref>
             <Link   
                 variant="overline" 
-                sx={{ mb:1, display: 'block', color:'text.primary', textDecorationColor:'#90a4ae' }}
+                sx={{ 
+                    mb:1, 
+                    display: 'block', 
+                    color:'text.primary', 
+                    textDecorationColor:'#90a4ae',
+                    fontSize: {xs:'0.7rem', lg:'0.8rem', xl: '1rem'} 
+                }}
                 underline={ (pathname === linkServiceTwo) ? 'always' : 'hover' }
             >
                 {serviceTwo}
@@ -49,7 +69,13 @@ export const PagesServicesItems: FC<FooterProps> = ({
         <NextLink href={linkServiceThree} passHref>
             <Link   
                 variant="overline" 
-                sx={{ mb:1, display: 'block', color:'text.primary', textDecorationColor:'#90a4ae' }}
+                sx={{ 
+                    mb:1, 
+                    display: 'block', 
+                    color:'text.primary', 
+                    textDecorationColor:'#90a4ae',
+                    fontSize: {xs:'0.7rem', lg:'0.8rem', xl: '1rem'} 
+                }}
                 underline={ (pathname === linkServiceThree) ? 'always' : 'hover' }
             >
                 {serviceThree}

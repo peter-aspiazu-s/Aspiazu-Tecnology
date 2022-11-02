@@ -12,7 +12,7 @@ const HomePage: NextPage = () => {
 
   return (
     <PlantillaLayout title={'Aspiazu Tecnology - Home'} contentPage={'Creadores de sitios web'}>
-      <Box sx={{mt: {xs: 10, sm: 12, md: 14, lg: 17, xl: 20}}}>
+      <Box sx={{mt: {xs: 10, md: 11}}}>
         <SlideHome 
           titleSlide1={'Website construction'}
           descriptionService1={'We create your website with the best technologies for the web'}

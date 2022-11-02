@@ -75,13 +75,13 @@ export const Navbar: FC<ItemsMenuProps> = ({
     <AppBar 
       sx={{ 
         backgroundColor: 'primary.dark', 
-        height:{xs: '80px', sm: '100px', md:'120px', lg:'140px', xl: '160px'},
+        height:{xs: '80px', md:'90px'},
         display: {xs: 'flex'}, 
         justifyContent: {xs:'center'}, 
         alignItems: {xs:'space-between'}
       }}
       >
-      <Toolbar sx={{px: {xl: 10}}}>
+      <Toolbar sx={{px: {lg: 8,xl: 10}}}>
           <Grid container>
             <Grid item xs={10} sm={9} md={4}>
               <NextLink href={linkHome} passHref>
@@ -89,7 +89,7 @@ export const Navbar: FC<ItemsMenuProps> = ({
                   component="h2" 
                   sx={{
                     cursor: 'pointer', 
-                    fontSize: {xs:'1.4rem', sm:'1.6rem', md:'1.8rem', lg: '2rem', xl: '2.2rem'}
+                    fontSize: {xs:'1.4rem', sm:'1.5rem', md:'1.7rem', lg: '1.8rem', xl: '1.9rem'}
                   }}
                 >
                   Aspiazu Tecnology
@@ -114,7 +114,7 @@ export const Navbar: FC<ItemsMenuProps> = ({
                       display: 'flex', 
                       justifyContent: 'center', 
                       alignItems: 'center',
-                      fontSize: {md:'0.8rem', lg:'1rem', xl: '1.2rem'}
+                      fontSize: {md:'0.7rem', lg:'0.8rem', xl: '1rem'}
                     }}>
                     {home}
                   </Typography>
@@ -141,7 +141,7 @@ export const Navbar: FC<ItemsMenuProps> = ({
                       display: 'flex', 
                       justifyContent: 'center', 
                       alignItems: 'center',
-                      fontSize: {md:'0.8rem', lg:'1rem', xl: '1.2rem'}
+                      fontSize: {md:'0.7rem', lg:'0.8rem', xl: '1rem'}
                     }}>
                     {services}
                   <KeyboardArrowDownIcon />
@@ -161,7 +161,7 @@ export const Navbar: FC<ItemsMenuProps> = ({
                       onClick={ handleClose } 
                       sx={{ 
                         color:'text.disabled',
-                        fontSize: {md:'0.8rem', lg:'1rem', xl: '1.2rem'}
+                        fontSize: {md:'0.7rem', lg:'0.8rem', xl: '1rem'}
                       }}
                     >
                       {serviceOne}
@@ -173,7 +173,7 @@ export const Navbar: FC<ItemsMenuProps> = ({
                       onClick={ handleClose } 
                       sx={{ 
                         color: 'text.disabled',
-                        fontSize: {md:'0.8rem', lg:'1rem', xl: '1.2rem'} 
+                        fontSize: {md:'0.7rem', lg:'0.8rem', xl: '1rem'} 
                       }}
                     >
                       {serviceTwo}
@@ -185,7 +185,7 @@ export const Navbar: FC<ItemsMenuProps> = ({
                       onClick={ handleClose } 
                       sx={{ 
                         color: 'text.disabled',
-                        fontSize: {md:'0.8rem', lg:'1rem', xl: '1.2rem'} 
+                        fontSize: {md:'0.7rem', lg:'0.8rem', xl: '1rem'} 
                       }}
                     >
                       {serviceThree}
@@ -201,7 +201,7 @@ export const Navbar: FC<ItemsMenuProps> = ({
                         display: 'flex', 
                         justifyContent: 'center', 
                         alignItems: 'center',
-                        fontSize: {md:'0.8rem', lg:'1rem', xl: '1.2rem'}  
+                        fontSize: {md:'0.7rem', lg:'0.8rem', xl: '1rem'}  
                       }}>
                       {about}
                     </Typography>
@@ -216,7 +216,7 @@ export const Navbar: FC<ItemsMenuProps> = ({
                         display: 'flex', 
                         justifyContent: 'center', 
                         alignItems: 'center',
-                        fontSize: {md:'0.8rem', lg:'1rem', xl: '1.2rem'}
+                        fontSize: {md:'0.7rem', lg:'0.8rem', xl: '1rem'}
                       }}>
                       {contact}
                     </Typography>
@@ -229,8 +229,8 @@ export const Navbar: FC<ItemsMenuProps> = ({
                 <Button color="secondary">
                   {
                     pathname.includes('/es') 
-                    ? <Image src={ImageEnglish} width={50} height={30} />
-                    : <Image src={ImageSpanish} width={50} height={30} />
+                    ? <Image src={ImageEnglish} width={40} height={30} />
+                    : <Image src={ImageSpanish} width={40} height={30} />
                   }
                 </Button>
               </NextLink>
@@ -239,14 +239,14 @@ export const Navbar: FC<ItemsMenuProps> = ({
               <IconButton color="secondary" onClick={handleModeTheme}>
                 {
                   modeTheme
-                    ? <LightModeIcon sx={{fontSize: {sm: '1.9rem', md: '2rem'}}} />
-                    : <NightlightIcon sx={{fontSize: {sm: '1.9rem', md: '2rem'}}} />
+                    ? <LightModeIcon sx={{fontSize: {sm: '1.5rem', md: '1.6rem'}}} />
+                    : <NightlightIcon sx={{fontSize: {sm: '1.5rem', md: '1.6rem'}}} />
                 }
               </IconButton>
             </Grid>
             <Grid item xs={2} sm={1} sx={{ display: { xs: 'flex', md: 'none' }, justifyContent: 'end' }} >
                 <IconButton onClick={ openSideMenu } sx={{ color:'text.primary' }}>
-                    <MenuIcon sx={{fontSize: {xs: '1.5rem', sm: '2rem'}}} />
+                    <MenuIcon sx={{fontSize: {xs: '1.5rem'}}} />
                 </IconButton>
             </Grid>
           </Grid>

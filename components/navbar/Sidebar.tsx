@@ -78,7 +78,7 @@ export const Sidebar: FC<ItemsMenuProps> = ({
                     <Grid container alignItems='center'>
                         <Grid item xs={4} sx={{display: 'flex', justifyContent: {xs:'center', sm:'start'}}}>
                             <IconButton onClick={ closeSideMenu } sx={{ color:'text.disabled' }}>
-                                <KeyboardArrowRightIcon sx={{fontSize: {xs:'2.4rem', sm:'2.5rem'}}}/>
+                                <KeyboardArrowRightIcon sx={{fontSize: {xs:'2.4rem'}}}/>
                             </IconButton>
                         </Grid>
                         <Grid item xs={4} sx={{display: {xs: 'flex', sm: 'none'}, justifyContent: 'center'}}>
@@ -86,8 +86,8 @@ export const Sidebar: FC<ItemsMenuProps> = ({
                                 <Button color="secondary" onClick={closeSideMenu}>
                                 {
                                     pathname.includes('/es')  
-                                    ? <Image src={ImageEnglish} width={50} height={30} />
-                                    : <Image src={ImageSpanish} width={50} height={30} />
+                                    ? <Image src={ImageEnglish} width={40} height={30} />
+                                    : <Image src={ImageSpanish} width={40} height={30} />
                                 }
                                 </Button>
                             </NextLink>
@@ -96,8 +96,8 @@ export const Sidebar: FC<ItemsMenuProps> = ({
                             <IconButton color="secondary" onClick={handleDispatchFunctions}>
                             {
                                 modeTheme
-                                ? <LightModeIcon sx={{fontSize:'2rem'}} />
-                                : <NightlightIcon sx={{fontSize:'2rem'}} />
+                                ? <LightModeIcon sx={{fontSize:'1.5rem'}} />
+                                : <NightlightIcon sx={{fontSize:'1.5rem'}} />
                             }
                             </IconButton>
                         </Grid>

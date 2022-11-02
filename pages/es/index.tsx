@@ -11,7 +11,7 @@ import { SectionContact } from '../../components/contact'
 const HomePage: NextPage = () => {
   return (
     <PlantillaLayoutEs title={'Aspiazu Tecnology - Home'} contentPage={'Creamos sitios web adaptables, hacemos trabajos de diseño gráfico y vendemos software de e-commerce'}>
-      <Box sx={{mt: {xs: 5, sm: 7, md: 8}}}>
+      <Box sx={{mt: {xs: 10, md: 11}}}>
         <SlideHome 
           titleSlide1={'Construcción de sitios web'}
           descriptionService1={'Creamos tu sitio web con las mejores tecnologías para la web'}
