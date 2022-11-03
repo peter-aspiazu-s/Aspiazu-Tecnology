@@ -6,7 +6,7 @@ import { AboutHeader, AboutMisionVision, AboutPersonal } from '../components/abo
 const AboutPage: NextPage = () => {
   return (
     <PlantillaLayout title={'Plantilla 1 - About'} contentPage={'Plantilla 1 para agilizar el desarrollo de los sitios web'}>
-      <Box sx={{mt: {xs: 5, sm: 7, md: 8}, height: 'auto', position: 'relative'}}>
+      <Box sx={{mt: {xs: 10, md: 11}, height: 'auto', position: 'relative'}}>
         <AboutHeader 
           aboutTitle={'About Us?'}
           aboutSemiDescription={'Aspiazu Technology it is a company dedicated to the creation of web applications, using reliable technologies such as NextJS, Material UI, CSS, React, Node, Mongo, Express, JWT, SQL'}

@@ -2,7 +2,6 @@ import type { NextPage } from 'next'
 import { Box, Container, Grid, Typography, IconButton } from '@mui/material';
 import { PlantillaLayoutEs } from '../../components/layout'
 import { ContactDirect, ContactForm, ContactHeader } from '../../components/contactPage';
-import { FormFooter } from '../../components/footer/FormFooter';
 
 import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
@@ -12,7 +11,7 @@ import YouTubeIcon from '@mui/icons-material/YouTube';
 const ContactPage: NextPage = () => {
   return (
     <PlantillaLayoutEs title={'Plantilla 1 - Contact'} contentPage={'Plantilla 1 para agilizar el desarrollo de los sitios web'}>
-      <Box sx={{mt: {xs: 5, sm: 7, md: 8}, height: 'auto', position: 'relative'}}>
+      <Box sx={{mt: {xs: 10, md: 11}, height: 'auto', position: 'relative'}}>
         <ContactHeader 
           contactTitle={'Contáctanos'}
           contactSemiDescription={'Ponte en contacto con un experto'}
@@ -22,7 +21,22 @@ const ContactPage: NextPage = () => {
       <Container sx={{py:5}}>
         <Grid container>
           <Grid item xs={12} md={6}>
-            <Typography sx={{fontSize: {xs:'25px', sm:'40px', md:'50px'}, color: 'text.disabled', textAlign: 'center', mb: 3}}>Formulario de Contacto</Typography>
+            <Typography 
+              sx={{
+                fontSize: {
+                  xs: '1.4rem', 
+                  sm: '1.5rem', 
+                  md: '1.7rem', 
+                  lg: '1.8rem',
+                  xl: '1.9rem'
+                }, 
+                color: 'text.disabled', 
+                textAlign: 'center', 
+                mb: 3
+              }}
+            >
+              Formulario de Contacto
+            </Typography>
           </Grid>
         </Grid>
         <Grid container justifyContent="center" alignItems="center">

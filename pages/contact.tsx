@@ -12,7 +12,7 @@ import YouTubeIcon from '@mui/icons-material/YouTube';
 const ContactPage: NextPage = () => {
   return (
     <PlantillaLayout title={'Plantilla 1 - Contact'} contentPage={'Plantilla 1 para agilizar el desarrollo de los sitios web'}>
-      <Box sx={{mt: {xs: 5, sm: 7, md: 8}, height: 'auto', position: 'relative'}}>
+      <Box sx={{mt: {xs: 10, md: 11}, height: 'auto', position: 'relative'}}>
         <ContactHeader 
           contactTitle={'Contact Us'}
           contactSemiDescription={'Get in touch with an expert'}
@@ -22,7 +22,22 @@ const ContactPage: NextPage = () => {
       <Container sx={{py:5}}>
         <Grid container>
           <Grid item xs={12} md={6}>
-            <Typography sx={{fontSize: {xs:'25px', sm:'40px', md:'50px'}, color: 'text.disabled', textAlign: 'center'}}>Contact Form</Typography>
+            <Typography 
+              sx={{
+                fontSize: {
+                  xs: '1.4rem', 
+                  sm: '1.5rem', 
+                  md: '1.7rem', 
+                  lg: '1.8rem',
+                  xl: '1.9rem'
+                }, 
+                color: 'text.disabled', 
+                textAlign: 'center', 
+                mb: 3
+              }}
+            >
+              Contact Form
+            </Typography>
           </Grid>
         </Grid>
         <Grid container justifyContent="center" alignItems="center">

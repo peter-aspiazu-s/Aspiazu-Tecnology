@@ -6,7 +6,7 @@ import { Container } from '@mui/material';
 const PoliciesPage: NextPage = () => {
     return (
         <PlantillaLayout title={'Policies | Aspiazu Tecnology'} contentPage={'Page of privacy policies, legal notice and cookie policies'}>
-            <Container sx={{mt:{xs: 10, sm: 12}, mb:3}}>
+            <Container sx={{mt:{xs: 12, md: 14}, mb:3}}>
                 <Policies 
                     company={'Aspiazu Tecnology'} 
                     title1={'PRIVACY POLICY'}

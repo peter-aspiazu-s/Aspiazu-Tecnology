@@ -6,7 +6,7 @@ import { AboutHeader, AboutMisionVision, AboutPersonal } from '../../components/
 const AboutPage: NextPage = () => {
   return (
     <PlantillaLayoutEs title={'Plantilla 1 - About'} contentPage={'Plantilla 1 para agilizar el desarrollo de los sitios web'}>
-      <Box sx={{mt: {xs: 5, sm: 7, md: 8}, height: 'auto', position: 'relative'}}>
+      <Box sx={{mt: {xs: 10, md: 11}, height: 'auto', position: 'relative'}}>
         <AboutHeader 
           aboutTitle={'¿Sobre Nosotros?'}
           aboutSemiDescription={'Apiazu Technology es una empresa dedicada a la creación de aplicaciónes web, usando tecnologías de confianza basadas en JavaScript'}
