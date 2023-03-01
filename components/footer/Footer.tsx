@@ -1,11 +1,17 @@
-import {FC} from 'react'
-import { Container, Grid, Typography, Box } from '@mui/material';
+import {FC} from 'react';
+
+import Container from '@mui/material/Container';
+import Grid from '@mui/material/Grid';
+import Typography from '@mui/material/Typography';
+import Box from '@mui/material/Box';
+
 import { PresentCompanyFooter } from './PresentCompanyFooter';
 import { PagesItems } from './PagesItems';
 import { PagesServicesItems } from './PagesServicesItems';
 import { ContactSocialMedia } from './ContactSocialMedia';
 import { FormFooter } from './FormFooter';
 import { LegalTerms } from './LegalTerms';
+import { ButtonWhatsApp } from './ButtonWhatsApp';
 
 interface FooterProps {
     presentCompany: string;
@@ -16,6 +22,8 @@ interface FooterProps {
     linkAbout: string;
     contact: string;
     linkContact: string;
+    frequentQuestions: string;
+    linkFrequentQuestions: string;
     titleItemsServices: string;
     serviceOne: string;
     linkServiceOne: string;
@@ -23,7 +31,14 @@ interface FooterProps {
     linkServiceTwo: string;
     serviceThree: string;
     linkServiceThree: string;
+    serviceFour:string;
+    linkServiceFour:string;
+    serviceFive:string;
+    linkServiceFive:string;
+    serviceSix:string;
+    linkServiceSix:string;
     contactUs:string;
+    linkContactFooter: string;
     legalWarning:string;
     linkLegalWarning:string;
     privacyPolicy:string;
@@ -39,6 +54,9 @@ interface FooterProps {
     emailErrorMessage: string;
     messageErrorMessage: string;
     warningMessageInput: string;
+    variantForm: string;
+    TextButtonWhatsApp: string;
+    messageButtonWhatsapp: string;
 }
 
 export const Footer: FC<FooterProps> = ({
@@ -50,6 +68,8 @@ export const Footer: FC<FooterProps> = ({
     linkAbout,
     contact,
     linkContact,
+    frequentQuestions,
+    linkFrequentQuestions,
     titleItemsServices,
     serviceOne,
     linkServiceOne,
@@ -57,7 +77,14 @@ export const Footer: FC<FooterProps> = ({
     linkServiceTwo,
     serviceThree,
     linkServiceThree,
+    serviceFour,
+    linkServiceFour,
+    serviceFive,
+    linkServiceFive,
+    serviceSix,
+    linkServiceSix,
     contactUs,
+    linkContactFooter,
     legalWarning,
     linkLegalWarning,
     privacyPolicy,
@@ -73,18 +100,21 @@ export const Footer: FC<FooterProps> = ({
     emailErrorMessage,
     messageErrorMessage,
     warningMessageInput,
+    variantForm,
+    TextButtonWhatsApp,
+    messageButtonWhatsapp,
 }) => {
 
   return (
     <Box 
-        style={{
+        sx={{
             height: "auto", 
-            width: "100%",  
+            width: "100%", 
         }} 
         justifyContent="center"
         alignItems="center"
     >
-        <Box sx={{ py:5, backgroundColor: 'primary.dark' }}>
+        <Box sx={{ py:5, backgroundColor: '#cfd8dc' }}>
             <Container>
                 <Grid container columnSpacing={5} mb={5}>
                     <Grid item xs={12} md={6} mb={{xs: 2, md: 0}}>
@@ -108,6 +138,8 @@ export const Footer: FC<FooterProps> = ({
                             linkContact={linkContact}
                             about={about}
                             linkAbout={linkAbout}
+                            frequentQuestions={frequentQuestions}
+                            linkFrequentQuestions={linkFrequentQuestions}
                          />
                     </Grid>
                     <Grid item xs={12} sm={6} md={3} sx={{textAlign: {xs: 'center', sm: 'left'}}}>
@@ -119,6 +151,12 @@ export const Footer: FC<FooterProps> = ({
                             linkServiceTwo={linkServiceTwo}
                             serviceThree={serviceThree}
                             linkServiceThree={linkServiceThree}
+                            serviceFour={serviceFour}
+                            linkServiceFour={linkServiceFour}
+                            serviceFive={serviceFive}
+                            linkServiceFive={linkServiceFive}
+                            serviceSix={serviceSix}
+                            linkServiceSix={linkServiceSix}
                         />
                     </Grid>
                 </Grid>
@@ -134,6 +172,7 @@ export const Footer: FC<FooterProps> = ({
                     >
                         <ContactSocialMedia 
                             contactUs={contactUs}
+                            linkContactFooter={linkContactFooter}
                         />
                     </Grid>
 
@@ -148,17 +187,32 @@ export const Footer: FC<FooterProps> = ({
                             emailErrorMessage={emailErrorMessage}
                             messageErrorMessage={messageErrorMessage}
                             warningMessageInput={warningMessageInput}
+                            variantForm={variantForm}
                         />
                     </Grid>
                 </Grid>
             </Container>
         </Box>
 
+        <Box 
+            sx={{
+                position: 'fixed',
+                right: '10px',
+                bottom: '20px',
+                zIndex: 1001 
+            }}
+        >
+            <ButtonWhatsApp 
+                TextButtonWhatsApp={TextButtonWhatsApp}
+                messageButtonWhatsapp={messageButtonWhatsapp}
+            />
+        </Box>
+
         <Box sx={{backgroundColor: 'primary.main', py:2}}>
             <Container>
                 <Grid container>
                     <Grid item mb={{xs: 2, sm: 0}} xs={12} sm={4} md={6} sx={{textAlign: {xs: 'center', sm: 'left'}}}>
-                        <Typography variant="subtitle2">2022 ® Aspiazu Tecnology</Typography>
+                        <Typography variant="subtitle2">2022 ® Aspiazu Technology</Typography>
                     </Grid>
                     <Grid 
                         item 
@@ -169,7 +223,8 @@ export const Footer: FC<FooterProps> = ({
                             display: 'flex', 
                             flexDirection: {xs: 'column', sm: 'row'}, 
                             justifyContent: 'space-around',
-                            textAlign: {xs: 'center', sm: 'left'}
+                            textAlign: {xs: 'center', sm: 'left'},
+                            zIndex: "2000"
                         }}
                     >
                         <LegalTerms 

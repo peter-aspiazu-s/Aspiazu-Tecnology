@@ -1,16 +1,17 @@
 import type { NextPage } from "next"
 import { PlantillaLayoutEs } from "../../components/layout"
 import { Policies } from "../../components/policies"
-import { Container } from '@mui/material';
+import Container from '@mui/material/Container';
 
 const PoliticasPage: NextPage = () => {
     return (
-        <PlantillaLayoutEs title={'Políticas | Aspiazu Tecnology'} contentPage={'Página de políticas de privacidad, aviso legal y políticas de cookies'}>
-            <Container sx={{mt:{xs: 12, md: 14}, mb:3}}>
+        <PlantillaLayoutEs title={'Aspiazu Tech | Politicas'} contentPage={'Página de políticas de privacidad, aviso legal y políticas de cookies'}>
+            <Container sx={{mt: {xs: 15, sm: 16, md: 17}, mb: 2}}>
+
                 <Policies 
-                    company={'Aspiazu Tecnology'} 
+                    company={'Aspiazu Technology'} 
                     title1={'POLÍTICA DE PRIVACIDAD'}
-                    textTitle1={'El presente Política de Privacidad establece los términos en que Aspiazu Tecnology usa y protege la información que es proporcionada por sus usuarios al momento de utilizar su sitio web. Esta compañía está comprometida con la seguridad de los datos de sus usuarios. Cuando le pedimos llenar los campos de información personal con la cual usted pueda ser identificado, lo hacemos asegurando que sólo se empleará de acuerdo con los términos de este documento. Sin embargo esta Política de Privacidad puede cambiar con el tiempo o ser actualizada por lo que le recomendamos y enfatizamos revisar continuamente esta página para asegurarse que está de acuerdo con dichos cambios.'}
+                    textTitle1={'El presente Política de Privacidad establece los términos en que Aspiazu Technology usa y protege la información que es proporcionada por sus usuarios al momento de utilizar su sitio web. Esta compañía está comprometida con la seguridad de los datos de sus usuarios. Cuando le pedimos llenar los campos de información personal con la cual usted pueda ser identificado, lo hacemos asegurando que sólo se empleará de acuerdo con los términos de este documento. Sin embargo esta Política de Privacidad puede cambiar con el tiempo o ser actualizada por lo que le recomendamos y enfatizamos revisar continuamente esta página para asegurarse que está de acuerdo con dichos cambios.'}
                     title2={'Información que es recogida'}
                     textTitle2={'Nuestro sitio web podrá recoger información personal por ejemplo: Nombre, información de contacto como su dirección de correo electrónica e información demográfica. Así mismo cuando sea necesario podrá ser requerida información específica para procesar algún pedido o realizar una entrega o facturación.'}
                     title3={'Uso de la información recogida'}

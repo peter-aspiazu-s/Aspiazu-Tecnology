@@ -1,70 +1,84 @@
-import type { NextPage } from 'next'
-import { Typography, Container, Box } from '@mui/material'
-import { PlantillaLayout } from '../components/layout'
-import { SlideHome } from '../components/slides'
-import { Technologies } from '../components/technologies'
-import { Testimonials } from '../components/testimonials'
-import { SectionAbout } from '../components/about'
-import { ServiceSection } from '../components/service'
-import { SectionContact } from '../components/contact'
+import type { NextPage } from 'next';
+
+import Container from '@mui/material/Container';
+import Box from '@mui/material/Box';
+
+import { PlantillaLayout } from '../components/layout';
+import { SectionAbout } from '../components/about';
+import { ServiceSection } from '../components/service';
+import { SectionContact } from '../components/contact';
+import { CompanySummary } from '../components/companySummary';
+import { TypedHome } from '../components/typedHome';
+import { homeTyped, nextSectionFour, nextSectionOne, nextSectionThree, nextSectionTwo } from '../database/dataHome';
+
 
 const HomePage: NextPage = () => {
 
   return (
-    <PlantillaLayout title={'Aspiazu Tecnology - Home'} contentPage={'Creadores de sitios web'}>
-      <Box sx={{mt: {xs: 10, md: 11}}}>
-        <SlideHome 
-          titleSlide1={'Website construction'}
-          descriptionService1={'We create your website with the best technologies for the web'}
-          servicePath1={'/services/web-site'}
-          titleSlide2={'Graphic design jobs'}
-          descriptionService2={'We do graphic design work using tools such as photoshop, illustrator, figma, etc.'}
-          servicePath2={'/services/graphic-design'}
-          titleSlide3={'E-commerce software'}
-          descriptionService3={'We develop your E-commerce that accepts payments nationally and internationally'}
-          servicePath3={'/services/e-commerce'}
-          start={'Start'}
+    <PlantillaLayout title={'Aspiazu Tech - Home'} contentPage={'It is a company dedicated to the creation of web applications, using reliable technologies such as NextJS, Material UI, CSS, React, Node, Mongo, Express, JWT, SQL'}>
+      
+      <Box 
+        sx={{
+          mt: {
+            xs: 13, sm: 14, md: 15
+            },
+          display: {xs: 'block', md: 'none'}
+          }}    
+      >
+        <TypedHome 
+          servicesTyped={['Roofing', 'Siding', 'Gutters']}
+          viewMore="View More"
         />
       </Box>
-      <Box sx={{mt: -1, py:3, backgroundColor: 'primary.light'}}>
+      <Box 
+        sx={{
+          mt: {
+            xs: 13, sm: 14, md: 15
+            },
+          display: {xs: 'none', md: 'block'}
+          }}    
+      >
+        <TypedHome 
+          servicesTyped={homeTyped[0]}
+          viewMore="View More"
+        />
+      </Box>
+
+      <Box sx={{mt: -1, py:5, backgroundColor: 'primary.light'}}>
         <Container>
-          <Technologies
-            technologiesTitle={'Technologies'}
-            technologiesSubTitle={'Web development and graphic design technologies'}
+
+          <CompanySummary
+            companySummaryTitle={nextSectionOne[0].titleSectionOne}
+            companySummaryDescription1={nextSectionOne[0].descriptionSectionOne}
+            companySummaryLinkAbout={nextSectionOne[0].linkSectionOne}
+            companySummaryMore={'Read more'}
           />
+
         </Container>
       </Box>
-      <Box sx={{py: 5}}>
-        <Testimonials
-          testimonialsTitle={'Customer Testimonials'}
-          clientTestimonial1={`"At first I wasn't very convinced about buying a website, but after knowing all the benefits I decided and hired Peter to help me with the work and I was very satisfied with the service."`}
-          nameClient1={'Andres Contreras'}
-          clientTestimonial2={`"At first I wasn't very convinced about buying a website, but after knowing all the benefits I decided and hired Peter to help me with the work and I was very satisfied with the service."`}
-          nameClient2={'Jefferson Ortega'}
-        />
-      </Box>
+      
       <Box sx={{mb: -1, height: 'auto', position: 'relative'}}>
         <SectionAbout 
-          aboutTitle={'About Us'}
-          aboutSemiDescription={'It is a company dedicated to the creation of web applications...'}
+          aboutTitle={nextSectionTwo[0].titleSectionTwo}
+          aboutSemiDescription={nextSectionTwo[0].descriptionSectionTwo}
           aboutVisitBTN={'Visit The Page'}
-          aboutLinkBtn={'/about'}
+          aboutLinkBtn={nextSectionTwo[0].linkSectionTwo}
         />
       </Box>
     
       <Box sx={{py: 5}}>
         <Container>
           <ServiceSection
-            serviceSectionTitle={'Services'}
-            service1Title={'Website construction'}
-            service1Description={'We create your website with the best technologies for the web...'}
-            service1Link={'/services/web-site'}
-            service2Title={'Graphic design jobs'}
-            service2Description={'We do graphic design work using tools such as photoshop, illustrator...'}
-            service2Link={'/services/graphic-design'}
-            service3Title={'E-commerce software'}
-            service3Description={'We develop your E-commerce that accepts payments nationally and...'}
-            service3Link={'/services/e-commerce'}
+            serviceSectionTitle={nextSectionThree[0].titleSectionThree}
+            service1Title={nextSectionThree[0].subTitleSectionThree[0]}
+            service1Description={nextSectionThree[0].descriptionSectionThree[0]}
+            service1Link={nextSectionThree[0].linkSectionThree[0]}
+            service2Title={nextSectionThree[0].subTitleSectionThree[1]}
+            service2Description={nextSectionThree[0].descriptionSectionThree[1]}
+            service2Link={nextSectionThree[0].linkSectionThree[1]}
+            service3Title={nextSectionThree[0].subTitleSectionThree[2]}
+            service3Description={nextSectionThree[0].descriptionSectionThree[2]}
+            service3Link={nextSectionThree[0].linkSectionThree[2]}
             textBtn={'Visit The Page'}
           />
         </Container>
@@ -72,10 +86,10 @@ const HomePage: NextPage = () => {
 
       <Box sx={{mb: -1, height: 'auto', position: 'relative'}}>
         <SectionContact 
-          contactTitle={'Contact Us'}
-          contactSemiDescription={'Check the different ways to contact us...'}
+          contactTitle={nextSectionFour[0].titleSectionFour}
+          contactSemiDescription={nextSectionFour[0].descriptionSectionFour}
           contactVisitBTN={'Visit The Page'}
-          contactLinkBtn={'/contact'}
+          contactLinkBtn={nextSectionFour[0].linkSectionFour}
         />
       </Box>
     </PlantillaLayout>

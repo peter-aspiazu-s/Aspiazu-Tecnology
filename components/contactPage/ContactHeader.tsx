@@ -1,42 +1,90 @@
-import {FC} from 'react'
-import Image from 'next/image';
-import { Grid, Box, Typography, Button } from '@mui/material';
+import {FC} from 'react';
 
-import BannerPageContactxs from '../../public/images/banner-page-contact-xs.webp'
-import BannerPageContactsm from '../../public/images/banner-page-contact-sm.webp'
-import BannerPageContactmd from '../../public/images/banner-page-contact-md.webp'
-import BannerPageContactlg from '../../public/images/banner-page-contact-lg.webp'
-import BannerPageContactxl from '../../public/images/banner-page-contact-xl.webp'
+import Grid from '@mui/material/Grid';
+import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
+import Button from '@mui/material/Button';
 
 interface SectionContactProps {
     contactTitle: string;
     contactSemiDescription: string;
     contactVisitBTN:string;
+    contactLinkMessageWhatsapp: string;
 }
 
 export const ContactHeader: FC<SectionContactProps> = ({
     contactTitle,
     contactSemiDescription,
     contactVisitBTN,
+    contactLinkMessageWhatsapp
 }) => {
+
+    const backgroundImageXS = '/images/banner-page-contact-xs.webp';
+    const backgroundImageSM = '/images/banner-page-contact-sm.webp';
+    const backgroundImageMD = '/images/banner-page-contact-md.webp';
+    const backgroundImageLG = '/images/banner-page-contact-lg.webp';
+    const backgroundImageXL = '/images/banner-page-contact-xl.webp';
+
   return (
-    <Grid container>
+    <Grid container className='fade-in'>
         <Grid item xs={12}>
-        <Box sx={{display: {xs: 'block', sm: 'none'}}}>
-                <Image src={BannerPageContactxs} />
-            </Box>
-            <Box sx={{display: {xs: 'none', sm: 'block', md:'none'}}}>
-                <Image src={BannerPageContactsm} />
-            </Box>
-            <Box sx={{display: {xs: 'none', md: 'block', lg:'none'}}}>
-                <Image src={BannerPageContactmd} />
-            </Box>
-            <Box sx={{display: {xs: 'none', lg:'block', xl:'none'}}}>
-                <Image src={BannerPageContactlg} />
-            </Box>
-            <Box sx={{display: {xs: 'none', xl:'block'}}}>
-                <Image src={BannerPageContactxl} />
-            </Box>
+            
+            <Box 
+                sx={{
+                    display: {xs: 'block', sm:'none'},
+                    background: `url('${backgroundImageXS}')`,
+                    // backgroundAttachment: 'fixed',
+                    backgroundSize: 'cover',
+                    WebkitBackgroundSize: 'cover',
+                    width: '100%',
+                    height: '100vh'
+                }} 
+            ></Box>
+            <Box 
+                sx={{
+                    display: {xs: 'none', sm:'block', md: 'none'},
+                    background: `url('${backgroundImageSM}')`,
+                    // backgroundAttachment: 'fixed',
+                    backgroundSize: 'cover',
+                    WebkitBackgroundSize: 'cover',
+                    width: '100%',
+                    height: '100vh'
+                }} 
+            ></Box>
+            <Box 
+                sx={{
+                    display: {xs: 'none', md: 'block', lg: 'none'},
+                    background: `url('${backgroundImageMD}')`,
+                    // backgroundAttachment: 'fixed',
+                    backgroundSize: 'cover',
+                    WebkitBackgroundSize: 'cover',
+                    width: '100%',
+                    height: '100vh'
+                }} 
+            ></Box>
+            <Box 
+                sx={{
+                    display: {xs: 'none', lg: 'block', xl: 'none'},
+                    background: `url('${backgroundImageLG}')`,
+                    // backgroundAttachment: 'fixed',
+                    backgroundSize: 'cover',
+                    WebkitBackgroundSize: 'cover',
+                    width: '100%',
+                    height: '100vh'
+                }} 
+            ></Box>
+            <Box 
+                sx={{
+                    display: {xs: 'none', xl: 'block'},
+                    background: `url('${backgroundImageXL}')`,
+                    // backgroundAttachment: 'fixed',
+                    backgroundSize: 'cover',
+                    WebkitBackgroundSize: 'cover',
+                    width: '100%',
+                    height: '100vh'
+                }} 
+            ></Box>
+
             <Box
                 sx={{
                     position: 'absolute',
@@ -45,7 +93,7 @@ export const ContactHeader: FC<SectionContactProps> = ({
                     flexDirection: 'column',
                     justifyContent: 'center',
                     alignItems: {xs: 'center', md: 'start'},
-                    height: {xs: '100%', sm:'100%'},
+                    height: {xs: '100%'},
                     width: {xs: '100%', xl: '50%'},
                     p: {xs: 1, sm: 10}
                 }}
@@ -59,19 +107,20 @@ export const ContactHeader: FC<SectionContactProps> = ({
                             lg: '1.8rem',
                             xl: '1.9rem'}, 
                         mb: {xs: 1, sm: 3, md: 3, lg: 4}
-                    }} 
-                    component="h3"
-                >
-                    {contactTitle}
-                </Typography>
-                <Typography sx={{fontSize: {xs: '0.8rem', sm: '0.9rem', md: '1rem'}, mb: {xs: 2, sm: 3, md: 3, lg: 4}, textAlign:{xs:'center', md:'left'}}} component="p">{contactSemiDescription}</Typography>
+                    }} component="h3">{contactTitle}</Typography>
+                <Typography 
+                    sx={{
+                        fontSize: {xs: '0.9rem', md: '1rem'}, 
+                        mb: {xs: 2, sm: 3, md: 3, lg: 4}, 
+                        textAlign:{xs:'center', md:'left'}
+                    }} component="p">{contactSemiDescription}</Typography>
                 <Button 
-                    href="https://walink.co/5e72b8"
+                    href={contactLinkMessageWhatsapp}
                     target="_blank" 
                     variant="contained" 
                     color="secondary" 
                     size={'large'} 
-                    sx={{fontSize: {xs: '0.8rem', xl: '1rem'}}}
+                    sx={{fontSize: {xs:'14px'}}}
                 >
                     {contactVisitBTN}
                 </Button>

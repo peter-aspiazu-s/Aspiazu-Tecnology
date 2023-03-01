@@ -1,11 +1,16 @@
-import type { NextPage } from 'next'
-import { Typography, Container, Grid } from '@mui/material'
-import { PlantillaLayout } from '../../components/layout'
-import EngineeringIcon from '@mui/icons-material/Engineering'
+import type { NextPage } from 'next';
 
-const EcommercePage: NextPage = () => {
+import Container from '@mui/material/Container';
+import Grid from '@mui/material/Grid';
+import Typography from '@mui/material/Typography';
+
+import EngineeringIcon from '@mui/icons-material/Engineering';
+
+import { PlantillaLayout } from '../../components/layout';
+
+const GuttersPage: NextPage = () => {
   return (
-    <PlantillaLayout title={'Plantilla 1 - ServiceThree'} contentPage={'Plantilla 1 para agilizar el desarrollo de los sitios web'}>
+    <PlantillaLayout title={'Aspiazu Tech | E-commerce'} contentPage={'EJC Home Improvement Corp is the best option for an efficient installation of rain gutters since we work with highly durable materials and ensure that your infrastructure will have the necessary outlet for different weather conditions.'}>
       <Container sx={{mt: {xs: 5, sm: 7, md: 8}, py: 5}}>
         <Grid container sx={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
           <Grid item xs={12}>
@@ -20,4 +25,4 @@ const EcommercePage: NextPage = () => {
   )
 }
 
-export default EcommercePage
+export default GuttersPage;

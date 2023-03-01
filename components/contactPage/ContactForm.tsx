@@ -1,6 +1,14 @@
-import {FC, useState, FormEvent} from 'react'
-import { Grid, Box, TextField, Button, Snackbar, Alert } from '@mui/material';
-import validator from 'validator'
+import {FC, useState, FormEvent, useEffect} from 'react';
+
+import Grid from '@mui/material/Grid';
+import Box from '@mui/material/Box';
+import TextField from '@mui/material/TextField';
+import Button from '@mui/material/Button';
+import Snackbar from '@mui/material/Snackbar';
+import Alert from '@mui/material/Alert';
+import CircularProgress from '@mui/material/CircularProgress';
+
+import validator from 'validator';
 
 interface ContactFormProps {
     labelName: string;
@@ -34,6 +42,7 @@ export const ContactForm: FC<ContactFormProps> = ({
     const [touchedName, setTouchedName] = useState(false);
     const [touchedEmail, setTouchedEmail] = useState(false);
     const [touchedMessage, setTouchedMessage] = useState(false);
+    const [btnForm, setBtnForm] = useState(false);
 
     const data = {
         name,
@@ -53,6 +62,7 @@ export const ContactForm: FC<ContactFormProps> = ({
           setTouchedName( false );
           setTouchedEmail( false );
           setTouchedMessage( false );
+          setBtnForm(true);
     
           console.log('Enviando...')
           fetch('/api/send-email', {
@@ -70,6 +80,7 @@ export const ContactForm: FC<ContactFormProps> = ({
               setEmail('')
               setMessage('')
               setOpenAlert(true)
+              setBtnForm(false)
             }
           }).catch((error) => {
             console.log(error)
@@ -95,8 +106,37 @@ export const ContactForm: FC<ContactFormProps> = ({
         return true
       }
 
+
+    //   ANIMACIONES
+    const [scrollAnimation, setScrollAnimation] = useState(false);
+
+  useEffect(() => {
+
+    const handleScroll = () => {
+      let animation = document.getElementById('animationScroll');
+      let position: any = animation?.getBoundingClientRect().top;
+
+      let windowSize = window.innerHeight / 4; 
+
+      if( position < windowSize ){
+        setScrollAnimation(true);
+      }
+    }
+
+    window.addEventListener('scroll', handleScroll);
+  
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    }
+  }, []);
+
   return (
-    <Grid container>
+    <Grid 
+        container
+        id='animationScroll' 
+        className={scrollAnimation ? 'animate__animated animate__backInLeft' : ''} 
+        display={scrollAnimation ? 'block' : 'none'}
+    >
         <Grid item xs={12}>
             <Box
                 component="form"
@@ -190,15 +230,26 @@ export const ContactForm: FC<ContactFormProps> = ({
                     rows={3}
                     sx={{mb:3}}
                 />
-                <Button 
+                {
+                    btnForm 
+                    ? 
+                    <Box 
+                        sx={{ 
+                            display: 'flex',
+                            justifyContent: 'center',
+                            alignItems: 'center'
+                        }}>
+                        <CircularProgress />
+                    </Box>
+                    :
+                    <Button 
                     type="submit" 
                     variant="contained" 
                     size="large" 
                     color="secondary"
                     sx={{fontSize: {xs: '0.8rem', xl: '1rem'}}}
-                >
-                    {btnSubmit}
-                </Button>
+                    >{btnSubmit}</Button>
+                }
             </Box>
         </Grid>
     </Grid>

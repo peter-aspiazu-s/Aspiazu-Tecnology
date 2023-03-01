@@ -1,42 +1,89 @@
-import {FC} from 'react'
-import Image from 'next/image';
-import { Grid, Box, Typography, Button } from '@mui/material';
+import {FC} from 'react';
 
-import BannerPageAboutxs from '../../public/images/banner-page-about-xs.webp'
-import BannerPageAboutsm from '../../public/images/banner-page-about-sm.webp'
-import BannerPageAboutmd from '../../public/images/banner-page-about-md.webp'
-import BannerPageAboutlg from '../../public/images/banner-page-about-lg.webp'
-import BannerPageAboutxl from '../../public/images/banner-page-about-xl.webp'
+import Grid from '@mui/material/Grid';
+import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
+import Button from '@mui/material/Button';
+
 
 interface AboutHeaderProps {
     aboutTitle: string;
     aboutSemiDescription: string;
     aboutVisitBTN:string;
+    aboutLinkMessageWhatsapp: string;
 }
 
 export const AboutHeader: FC<AboutHeaderProps> = ({
     aboutTitle,
     aboutSemiDescription,
     aboutVisitBTN,
+    aboutLinkMessageWhatsapp
 }) => {
+
+    const backgroundImageXS = '/images/banner-page-about-xs.webp';
+    const backgroundImageSM = '/images/banner-page-about-sm.webp';
+    const backgroundImageMD = '/images/banner-page-about-md.webp';
+    const backgroundImageLG = '/images/banner-page-about-lg.webp';
+    const backgroundImageXL = '/images/banner-page-about-xl.webp';
+
   return (
-    <Grid container>
+    <Grid container className='fade-in'>
         <Grid item xs={12}>
-            <Box sx={{display: {xs: 'block', sm: 'none'}}}>
-                <Image src={BannerPageAboutxs} />
-            </Box>
-            <Box sx={{display: {xs: 'none', sm: 'block', md:'none'}}}>
-                <Image src={BannerPageAboutsm} />
-            </Box>
-            <Box sx={{display: {xs: 'none', md: 'block', lg:'none'}}}>
-                <Image src={BannerPageAboutmd} />
-            </Box>
-            <Box sx={{display: {xs: 'none', lg:'block', xl:'none'}}}>
-                <Image src={BannerPageAboutlg} />
-            </Box>
-            <Box sx={{display: {xs: 'none', xl:'block'}}}>
-                <Image src={BannerPageAboutxl} />
-            </Box>
+            <Box 
+                sx={{
+                    display: {xs:'block', sm: 'none'},
+                    background: `url('${backgroundImageXS}')`,
+                    // backgroundAttachment: 'fixed',
+                    backgroundSize: 'cover',
+                    WebkitBackgroundSize: 'cover',
+                    width: '100%',
+                    height: '100vh'
+                }} 
+            ></Box>
+            <Box 
+                sx={{
+                    display: {xs: 'none', sm: 'block', md: 'none'},
+                    background: `url('${backgroundImageSM}')`,
+                    // backgroundAttachment: 'fixed',
+                    backgroundSize: 'cover',
+                    WebkitBackgroundSize: 'cover',
+                    width: '100%',
+                    height: '100vh'
+                }} 
+            ></Box>
+            <Box 
+                sx={{
+                    display: {xs: 'none', md: 'block', lg: 'none'},
+                    background: `url('${backgroundImageMD}')`,
+                    // backgroundAttachment: 'fixed',
+                    backgroundSize: 'cover',
+                    WebkitBackgroundSize: 'cover',
+                    width: '100%',
+                    height: '100vh'
+                }} 
+            ></Box>
+            <Box 
+                sx={{
+                    display: {xs: 'none', lg: 'block', xl: 'none'},
+                    background: `url('${backgroundImageLG}')`,
+                    // backgroundAttachment: 'fixed',
+                    backgroundSize: 'cover',
+                    WebkitBackgroundSize: 'cover',
+                    width: '100%',
+                    height: '100vh'
+                }} 
+            ></Box>
+            <Box 
+                sx={{
+                    display: {xs: 'none', xl: 'block'},
+                    background: `url('${backgroundImageXL}')`,
+                    // backgroundAttachment: 'fixed',
+                    backgroundSize: 'cover',
+                    WebkitBackgroundSize: 'cover',
+                    width: '100%',
+                    height: '100vh'
+                }} 
+            ></Box>
 
             <Box
                 sx={{
@@ -46,7 +93,7 @@ export const AboutHeader: FC<AboutHeaderProps> = ({
                     flexDirection: 'column',
                     justifyContent: 'center',
                     alignItems: {xs: 'center', md: 'start'},
-                    height: {xs: '100%', sm:'100%'},
+                    height: {xs: '100%'},
                     width: {xs: '100%', xl: '50%'},
                     p: {xs: 1, sm: 10}
                 }}
@@ -58,26 +105,19 @@ export const AboutHeader: FC<AboutHeaderProps> = ({
                             sm: '1.5rem', 
                             md: '1.7rem', 
                             lg: '1.8rem',
-                            xl: '1.9rem'
-                        }, 
+                            xl: '1.9rem'}, 
                         mb: {xs: 1, sm: 3, md: 3, lg: 4}
-                    }} 
-                    component="h3"
-                >
-                    {aboutTitle}
-                </Typography>
+                    }} component="h3">{aboutTitle}</Typography>
                 <Typography 
                     sx={{
-                        fontSize: {xs: '0.8rem', sm: '0.9rem', md: '1rem'}, 
-                        mb: {xs: 2, sm: 3, md: 3, lg: 4}, 
+                        fontSize: {xs: '0.9rem', md: '1rem'}, 
+                            mb: {xs: 2, sm: 3, md: 3, lg: 4}, 
                         textAlign:{xs:'center', md:'left'}
                     }} 
                     component="p"
-                >
-                    {aboutSemiDescription}
-                </Typography>
+                >{aboutSemiDescription}</Typography>
                 <Button 
-                    href="https://walink.co/5e72b8"
+                    href={aboutLinkMessageWhatsapp}
                     target="_blank" 
                     variant="contained" 
                     color="secondary" 

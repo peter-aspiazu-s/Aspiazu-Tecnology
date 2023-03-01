@@ -1,6 +1,9 @@
-import {FC, useContext} from 'react'
+import {FC, useContext} from 'react';
 import NextLink from 'next/link';
-import { Typography, Link } from '@mui/material'
+
+import Typography from '@mui/material/Typography';
+import Link from '@mui/material/Link';
+
 import { UiContext } from '../../context';
 
 interface FooterProps {
@@ -11,6 +14,8 @@ interface FooterProps {
     linkContact:string;
     about:string;
     linkAbout:string;
+    frequentQuestions: string;
+    linkFrequentQuestions: string;
 }
 
 export const PagesItems: FC<FooterProps> = ({
@@ -21,6 +26,8 @@ export const PagesItems: FC<FooterProps> = ({
     linkContact,
     about,
     linkAbout,
+    frequentQuestions,
+    linkFrequentQuestions,
 }) => {
 
     const { pathname } = useContext(UiContext)
@@ -30,21 +37,19 @@ export const PagesItems: FC<FooterProps> = ({
         <Typography 
             sx={{ 
                 fontWeight: 'bold', 
-                mb:2,
-                fontSize:{xs: '1.2rem', sm: '1.3rem', md: '1.4rem', lg: '1.5rem', xl: '1.6rem'} 
-            }}
-        >
-            {titleItems}
-        </Typography>
+                mb:2, 
+                color:'text.disabled',
+                fontSize:{xs: '1.2rem', sm: '1.3rem', md: '1.4rem', lg: '1.5rem', xl: '1.6rem'}
+            }}>{titleItems}</Typography>
         <NextLink href={linkHome} passHref>
             <Link 
                 variant="overline" 
-                sx={{ 
+                sx={{
                     mb:1, 
                     display: 'block', 
-                    color:'text.primary', 
-                    textDecorationColor:'#90a4ae', 
-                    fontSize: {xs:'0.7rem', lg:'0.8rem'}
+                    color:'text.disabled',
+                    textDecorationColor:'#90a4ae',
+                    fontSize: {xs:'0.7rem'}
                 }}
                 underline={ pathname === linkHome ? 'always' : 'hover' }
             >
@@ -57,9 +62,9 @@ export const PagesItems: FC<FooterProps> = ({
                 sx={{ 
                     mb:1, 
                     display: 'block', 
-                    color:'text.primary', 
-                    textDecorationColor:'#90a4ae', 
-                    fontSize: {xs:'0.7rem', lg:'0.8rem'}
+                    color:'text.disabled', 
+                    textDecorationColor:'#90a4ae',
+                    fontSize: {xs:'0.7rem'}
                 }}
                 underline={ (pathname === linkAbout) ? 'always' : 'hover' }
             >
@@ -72,13 +77,28 @@ export const PagesItems: FC<FooterProps> = ({
             sx={{ 
                 mb:1, 
                 display: 'block', 
-                color:'text.primary', 
+                color:'text.disabled', 
                 textDecorationColor:'#90a4ae',
-                fontSize: {xs:'0.7rem', lg:'0.8rem'} 
+                fontSize: {xs:'0.7rem'}
             }}
             underline={ (pathname === linkContact) ? 'always' : 'hover' }
         >
             {contact}
+        </Link>
+        </NextLink>
+        <NextLink href={linkFrequentQuestions} passHref>
+        <Link 
+            variant="overline" 
+            sx={{ 
+                mb:1, 
+                display: 'block', 
+                color:'text.disabled', 
+                textDecorationColor:'#90a4ae',
+                fontSize: {xs:'0.7rem'}
+            }}
+            underline={ (pathname === linkFrequentQuestions) ? 'always' : 'hover' }
+        >
+            {frequentQuestions}
         </Link>
         </NextLink>
     </>

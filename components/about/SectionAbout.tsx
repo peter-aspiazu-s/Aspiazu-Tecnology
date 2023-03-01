@@ -1,13 +1,12 @@
 import {FC} from 'react'
 import Image from 'next/image';
 import NextLink from 'next/link';
-import { Grid, Typography, Button, Box } from '@mui/material';
 
-import BannerSectionAboutxs from '../../public/images/banner-section-about-xs.webp'
-import BannerSectionAboutsm from '../../public/images/banner-section-about-sm.webp'
-import BannerSectionAboutmd from '../../public/images/banner-section-about-md.webp'
-import BannerSectionAboutlg from '../../public/images/banner-section-about-lg.webp'
-import BannerSectionAboutxl from '../../public/images/banner-section-about-xl.webp'
+import Grid from '@mui/material/Grid';
+import Typography from '@mui/material/Typography';
+import Button from '@mui/material/Button';
+import Box from '@mui/material/Box';
+
 
 interface SectionAboutProps {
     aboutTitle: string;
@@ -22,24 +21,44 @@ export const SectionAbout: FC<SectionAboutProps> = ({
     aboutVisitBTN,
     aboutLinkBtn,
 }) => {
+
+    const backgroundImage = '/images/banner-about-section.webp';
+
   return (
     <Grid container>
         <Grid item xs={12}>
-            <Box sx={{display: {xs: 'block', sm: 'none'}}}>
-                <Image src={BannerSectionAboutxs} />
+
+            <Box 
+                sx={{
+                    display: {xs: 'block', md: 'none'},
+                    background: `url('${backgroundImage}')`,
+                    // backgroundAttachment: 'fixed',
+                    backgroundSize: 'cover',
+                    WebkitBackgroundSize: 'cover',
+                    backgroundPositionX: 'center',
+                    backgroundPositionY: 'center',
+                    width: '100%',
+                    height: '400px'
+                }}
+            >
             </Box>
-            <Box sx={{display: {xs: 'none', sm: 'block', md: 'none'}}}>
-                <Image src={BannerSectionAboutsm} />
+            
+            <Box 
+                sx={{
+                    display: {xs: 'none', md: 'block'},
+                    background: `url('${backgroundImage}')`,
+                    // backgroundAttachment: 'fixed',
+                    backgroundSize: 'cover',
+                    WebkitBackgroundSize: 'cover',
+                    backgroundPositionX: 'center',
+                    backgroundPositionY: 'center',
+                    width: '100%',
+                    height: '500px'
+                }}
+            >
             </Box>
-            <Box sx={{display: {xs: 'none', md: 'block', lg: 'none'}}}>
-                <Image src={BannerSectionAboutmd} />
-            </Box>
-            <Box sx={{display: {xs: 'none', lg: 'block', xl: 'none'}}}>
-                <Image src={BannerSectionAboutlg} />
-            </Box>
-            <Box sx={{display: {xs: 'none', xl: 'block'}}}>
-                <Image src={BannerSectionAboutxl} />
-            </Box>
+            
+            
             <Box
                 sx={{
                     position: 'absolute',
@@ -57,14 +76,19 @@ export const SectionAbout: FC<SectionAboutProps> = ({
                     sx={{
                         fontSize: {xs: '1.4rem', sm: '1.5rem', md: '1.7rem', lg: '1.8rem', xl: '1.9rem'}, 
                         mb: {xs: 1, sm: 3, md: 3, lg: 4}
-                    }} 
-                    component="h3"
-                >
-                    {aboutTitle}
-                </Typography>
-                <Typography sx={{fontSize: {xs: '0.8rem', sm: '0.9rem', md: '1rem'}, mb: {xs: 2, sm: 3, md: 3, lg: 4}, textAlign:{xs:'center', md:'left'}}} component="p">{aboutSemiDescription}</Typography>
+                    }} component="h3">{aboutTitle}</Typography>
+                <Typography 
+                    sx={{
+                        fontSize: {xs: '0.9rem', md: '1rem'}, 
+                        mb: {xs: 2, sm: 3, md: 3, lg: 4}, 
+                        textAlign:{xs:'center', md:'left'}
+                    }} component="p">{aboutSemiDescription}</Typography>
                 <NextLink href={aboutLinkBtn} passHref>
-                    <Button variant="contained" color="secondary" size={'large'} sx={{fontSize: {xs: '0.8rem', xl: '1rem'}}}>{aboutVisitBTN}</Button>
+                    <Button 
+                        variant="contained" 
+                        color="secondary" 
+                        size={'large'} 
+                        sx={{fontSize: {xs: '0.8rem', xl: '1rem'}}}>{aboutVisitBTN}</Button>
                 </NextLink>
             </Box>
         </Grid>

@@ -1,11 +1,16 @@
-import type { NextPage } from 'next'
-import { Typography, Container, Grid } from '@mui/material'
-import { PlantillaLayout } from '../../components/layout'
-import EngineeringIcon from '@mui/icons-material/Engineering'
+import type { NextPage } from 'next';
 
-const GraphicDesignPage: NextPage = () => {
+import Container from '@mui/material/Container';
+import Grid from '@mui/material/Grid';
+import Typography from '@mui/material/Typography';
+
+import EngineeringIcon from '@mui/icons-material/Engineering';
+
+import { PlantillaLayout } from '../../components/layout';
+
+const SidingPage: NextPage = () => {
   return (
-    <PlantillaLayout title={'Plantilla 1 - ServiceTwo'} contentPage={'Plantilla 1 para agilizar el desarrollo de los sitios web'}>
+    <PlantillaLayout title={'Aspiazu Tech | Graphic design'} contentPage={'In EJC Home Improvement Corp in our siding service, we generate a coating that helps the care and maintenance of any infrastructure, making it more durable and protected from the outside.'}>
       <Container sx={{mt: {xs: 5, sm: 7, md: 8}, py: 5}}>
         <Grid container sx={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
           <Grid item xs={12}>
@@ -20,4 +25,4 @@ const GraphicDesignPage: NextPage = () => {
   )
 }
 
-export default GraphicDesignPage
+export default SidingPage

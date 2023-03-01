@@ -1,5 +1,8 @@
-import {FC} from 'react'
-import { Typography } from '@mui/material'
+import {FC} from 'react';
+import Image from 'next/image';
+
+import Typography from '@mui/material/Typography';
+import Grid from '@mui/material/Grid';
 
 interface FooterProps {
   presentCompany: string;
@@ -7,26 +10,18 @@ interface FooterProps {
 
 export const PresentCompanyFooter: FC<FooterProps> = ({presentCompany}) => {
   return (
-    <>
-        <Typography  
-            sx={{ 
-                fontWeight: 'bold', 
-                mb:2, 
-                textAlign: {xs: 'center', sm: 'left'},
-                fontSize: {xs:'1.4rem', sm:'1.5rem', md:'1.7rem', lg: '1.8rem', xl: '1.9rem'}
-            }}
-            component="h3"
-        >
-          Aspiazu Tecnology
-        </Typography>
+    <Grid container>
+      <Grid item xs={12} sx={{display: 'flex', justifyContent:{xs: 'center', md:'start'}, alignItems:'center'}}>
+          <Image src='/images/logo.png' alt='logo' width={250} height={250} />
+      </Grid>
+      <Grid item xs={12}>
         <Typography 
           sx={{
-            textAlign: {xs: 'justify', sm: 'left'},
-            fontSize: {xs: '0.8rem', sm: '0.9rem', md: '1rem'}
-          }}
-        >
-          {presentCompany}
-        </Typography>
-    </>
+            color:'text.disabled', 
+            textAlign: {xs: 'justify'},
+            fontSize: {xs: '0.9rem', md: '1rem'}
+          }}>{presentCompany}</Typography>
+      </Grid>
+    </Grid>
   )
 }

@@ -1,23 +1,37 @@
-import type { NextPage } from 'next'
-import { Typography, Container, Grid } from '@mui/material';
-import { PlantillaLayout } from '../../components/layout'
-import EngineeringIcon from '@mui/icons-material/Engineering';
+import type { NextPage } from 'next';
 
-const WebSitePage: NextPage = () => {
+import Box from '@mui/material/Box';
+import Container from '@mui/material/Container';
+
+import { PlantillaLayout } from '../../components/layout'
+import { ServiceOneHeader, ServiceOneMore, WorkDone } from '../../components/servicesPages';
+
+const RoofingPage: NextPage = () => {
   return (
-    <PlantillaLayout title={'Plantilla 1 - ServiceOne'} contentPage={'Plantilla 1 para agilizar el desarrollo de los sitios web'}>
-      <Container sx={{mt: {xs: 5, sm: 7, md: 8}, py: 5}}>
-        <Grid container sx={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
-          <Grid item xs={12}>
-            <Typography sx={{fontSize: {xs: '40px', sm: '60px', md: '80px'}, color:'text.disabled', textAlign: 'center'}}>Page in maintenance</Typography>
-          </Grid>
-          <Grid item xs={12} sx={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
-            <EngineeringIcon sx={{fontSize: {xs: '260px', sm: '280px', md: '300px'}, color:'text.disabled', textAlign: 'center'}} />
-          </Grid>
-        </Grid>
+    <PlantillaLayout title={'Aspiazu Tech | WebSite'} contentPage={'At EJC Home Improvement Corp, our priority is to help our clients to guarantee that their roofs receive the best repairs, using quality materials, helping them to last several years without the need of a replacement in a short period of time.'}>
+      <Box sx={{mt: {xs: 13, sm: 14, md: 15}, height: 'auto', position: 'relative'}}>
+        <ServiceOneHeader 
+          ServiceOneHeaderTitle={'Website construction'}
+          ServiceOneHeaderSemiDescription={'We create your website with the best technologies for the web.'}
+          ServiceOneHeaderVisitBTN={'Contact'}
+          ServiceOneHeaderLinkMessageWhastapp={'https://wa.link/skf9x5'}
+        />
+      </Box>
+      {/* <Container sx={{py:5}}>
+        <ServiceOneMore 
+          serviceOneMoreTitle={'More about the service'}
+          serviceOneMoreDescription1={'This is why a timely repair is considered necessary in order to have a proper maintenance and avoid major expenses in the future.'}
+          serviceOneMoreDescription2={'At EJC Home Improvement Corp, our priority is to help our clients to guarantee that their roofs receive the best repairs, using quality materials, helping them to last several years without the need of a replacement in a short period of time.'}
+          serviceOneMoreDescription3={'It is worth mentioning that our roofs and designs have an added value, since they can be customized to the needs of our customers, in order to improve their durability.'}
+        />
       </Container>
+      <Container sx={{py:5}}>
+        <WorkDone 
+          workDone={'Work Done'}
+        />
+      </Container> */}
     </PlantillaLayout>
   )
 }
 
-export default WebSitePage
+export default RoofingPage

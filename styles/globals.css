@@ -2,7 +2,11 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    -webkit-text-size-adjust: none;
 }
+
+/* Evita inflación de sitios en navegadores */
+
 
 
 .swiper {
@@ -37,3 +41,36 @@
 }
 
 
+.logo{
+    cursor: pointer;
+}
+
+.text-color{
+    color: #263238 !important;
+}
+
+
+.img-xl img{
+    height: 100vh !important;
+}
+
+
+
+/* ANIMACION FADE */
+.fade-in{
+    animation-duration: 2s;
+    -webkit-animation-duration: 2s;
+    animation-name: fadeIn;
+    -webkit-animation-name: fadeIn;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        -webkit-opacity: 0;
+    }
+    to {
+        opacity: 1;
+        -webkit-opacity: 0;
+    }
+}

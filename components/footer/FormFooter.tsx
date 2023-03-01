@@ -1,6 +1,13 @@
-import {FC, useState, FormEvent} from 'react'
-import { Box, TextField, Button, Snackbar, Alert } from '@mui/material'
-import validator from 'validator'
+import {FC, useState, FormEvent} from 'react';
+
+import Box from '@mui/material/Box';
+import TextField from '@mui/material/TextField';
+import Button from '@mui/material/Button';
+import Snackbar from '@mui/material/Snackbar';
+import Alert from '@mui/material/Alert';
+import CircularProgress from '@mui/material/CircularProgress';
+
+import validator from 'validator';
 
 interface FormProps {
   labelName: string;
@@ -12,6 +19,7 @@ interface FormProps {
   emailErrorMessage: string;
   messageErrorMessage: string;
   warningMessageInput: string;
+  variantForm: string;
 }
 
 
@@ -45,6 +53,7 @@ export const FormFooter: FC<FormProps> = ({
   const [touchedName, setTouchedName] = useState(false);
   const [touchedEmail, setTouchedEmail] = useState(false);
   const [touchedMessage, setTouchedMessage] = useState(false);
+  const [btnForm, setBtnForm] = useState(false);
 
   const handleClose = () => {
     setOpenAlert(false)
@@ -58,6 +67,7 @@ export const FormFooter: FC<FormProps> = ({
       setTouchedName( false );
       setTouchedEmail( false );
       setTouchedMessage( false );
+      setBtnForm(true);
 
       console.log('Enviando...')
       fetch('/api/send-email', {
@@ -75,6 +85,7 @@ export const FormFooter: FC<FormProps> = ({
           setEmail('')
           setMessage('')
           setOpenAlert(true)
+          setBtnForm(false)
         }
       }).catch((error) => {
         console.log(error)
@@ -126,8 +137,13 @@ export const FormFooter: FC<FormProps> = ({
           fullWidth
           InputLabelProps={{
             style: {
-                color: '#eceff1',
+                color: '#263238',
                 fontSize: '1rem'
+            }
+          }}
+          InputProps={{
+            style: {
+                color: '#263238'
             }
           }}
           sx={{ mb:2 }}
@@ -146,8 +162,13 @@ export const FormFooter: FC<FormProps> = ({
           fullWidth
           InputLabelProps={{
             style: {
-                color: '#eceff1',
+                color: '#263238',
                 fontSize: '1rem'
+            }
+          }}
+          InputProps={{
+            style: {
+                color: '#263238'
             }
           }}
           sx={{ mb:2 }} 
@@ -168,21 +189,39 @@ export const FormFooter: FC<FormProps> = ({
           rows={3}
           InputLabelProps={{
             style: {
-                color: '#eceff1',
+                color: '#263238',
                 fontSize: '1rem'
+            }
+          }}
+          InputProps={{
+            style: {
+                color: '#263238'
             }
           }}
           sx={{ mb:2 }} 
       />
-      <Button 
-        type="submit" 
-        variant="contained" 
-        fullWidth 
-        color="secondary"
-        sx={{fontSize: {xs: '0.8rem', xl: '1rem'}}}
-      >
-        {btnSubmit}
-      </Button>
+      {
+        btnForm 
+        ? 
+        <Box 
+          sx={{ 
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center'
+          }}>
+          <CircularProgress />
+        </Box>
+        :
+        <Button 
+          type="submit" 
+          variant="contained" 
+          fullWidth 
+          color="secondary"
+          sx={{fontSize: {xs: '0.8rem', xl: '1rem'}}}
+        >{btnSubmit}</Button>
+      }
+      
+      
     </Box>
   )
 }

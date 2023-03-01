@@ -1,11 +1,16 @@
-import type { NextPage } from 'next'
-import { Typography, Container, Grid } from '@mui/material'
-import { PlantillaLayoutEs } from '../../../components/layout'
-import EngineeringIcon from '@mui/icons-material/Engineering'
+import type { NextPage } from 'next';
 
-const ServiceTwoPage: NextPage = () => {
+import Container from '@mui/material/Container';
+import Grid from '@mui/material/Grid';
+import Typography from '@mui/material/Typography';
+
+import EngineeringIcon from '@mui/icons-material/Engineering';
+
+import { PlantillaLayoutEs } from '../../../components/layout';
+
+const ViaMuertaPage: NextPage = () => {
   return (
-    <PlantillaLayoutEs title={'Plantilla 1 - ServiceTwo'} contentPage={'Plantilla 1 para agilizar el desarrollo de los sitios web'}>
+    <PlantillaLayoutEs title={'EJC | Siding'} contentPage={'En EJC Home Improvement Corp en nuestro servicio de siding, generamos un revestimiento que ayuda al cuidado y mantenimiento de cualquier infraestructura, haciéndola más duradera y protegida del exterior.'}>
       <Container sx={{mt: {xs: 5, sm: 7, md: 8}, py: 5}}>
         <Grid container sx={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
           <Grid item xs={12}>
@@ -20,4 +25,4 @@ const ServiceTwoPage: NextPage = () => {
   )
 }
 
-export default ServiceTwoPage
+export default ViaMuertaPage

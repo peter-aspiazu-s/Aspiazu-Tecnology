@@ -15,7 +15,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
             port: 465,
             host: 'smtp.gmail.com',
             auth: {
-                user: 'paspiazusabando@gmail.com',
+                user: 'aspiazusa@gmail.com',
                 pass: password,
             },
             secure: true,

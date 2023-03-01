@@ -1,13 +1,12 @@
 import {FC} from 'react'
 import Image from 'next/image';
 import NextLink from 'next/link';
-import { Grid, Typography, Button, Box } from '@mui/material';
 
-import BannerSectionContactxs from '../../public/images/banner-section-contact-xs.webp'
-import BannerSectionContactsm from '../../public/images/banner-section-contact-sm.webp'
-import BannerSectionContactmd from '../../public/images/banner-section-contact-md.webp'
-import BannerSectionContactlg from '../../public/images/banner-section-contact-lg.webp'
-import BannerSectionContactxl from '../../public/images/banner-section-contact-xl.webp'
+import Grid from '@mui/material/Grid';
+import Typography from '@mui/material/Typography';
+import Button from '@mui/material/Button';
+import Box from '@mui/material/Box';
+
 
 interface SectionContactProps {
     contactTitle: string;
@@ -22,23 +21,40 @@ export const SectionContact: FC<SectionContactProps> = ({
     contactVisitBTN,
     contactLinkBtn,
 }) => {
+
+    const backgroundImage = '/images/banner-contact-section.webp';
+
   return (
     <Grid container>
         <Grid item xs={12}>
-        <Box sx={{display: {xs: 'block', sm: 'none'}}}>
-                <Image src={BannerSectionContactxs} />
+            <Box 
+                sx={{
+                    display: {xs: 'block', md: 'none'},
+                    background: `url('${backgroundImage}')`,
+                    // backgroundAttachment: 'fixed',
+                    backgroundSize: 'cover',
+                    WebkitBackgroundSize: 'cover',
+                    backgroundPositionX: 'center',
+                    backgroundPositionY: 'center',
+                    width: '100%',
+                    height: '400px'
+                }}
+            >
             </Box>
-            <Box sx={{display: {xs: 'none', sm: 'block', md: 'none'}}}>
-                <Image src={BannerSectionContactsm} />
-            </Box>
-            <Box sx={{display: {xs: 'none', md: 'block', lg: 'none'}}}>
-                <Image src={BannerSectionContactmd} />
-            </Box>
-            <Box sx={{display: {xs: 'none', lg: 'block', xl: 'none'}}}>
-                <Image src={BannerSectionContactlg} />
-            </Box>
-            <Box sx={{display: {xs: 'none', xl: 'block'}}}>
-                <Image src={BannerSectionContactxl} />
+           
+            <Box 
+                sx={{
+                    display: {xs: 'none', md: 'block'},
+                    background: `url('${backgroundImage}')`,
+                    // backgroundAttachment: 'fixed',
+                    backgroundSize: 'cover',
+                    WebkitBackgroundSize: 'cover',
+                    backgroundPositionX: 'center',
+                    backgroundPositionY: 'center',
+                    width: '100%',
+                    height: '500px'
+                }}
+            >
             </Box>
             <Box
                 sx={{
@@ -54,24 +70,24 @@ export const SectionContact: FC<SectionContactProps> = ({
                 }}
             >
                 <Typography 
-                    sx={{fontSize: {xs: '1.4rem', sm: '1.5rem', md: '1.7rem', lg: '1.8rem', xl: '1.9rem'}, 
-                    mb: {xs: 1, sm: 3, md: 3, lg: 4}}} 
-                    component="h3"
-                >
-                    {contactTitle}
-                </Typography>
+                    sx={{
+                        fontSize: {xs: '1.4rem', sm: '1.5rem', md: '1.7rem', lg: '1.8rem', xl: '1.9rem'}, 
+                        mb: {xs: 1, sm: 3, md: 3, lg: 4}
+                    }} component="h3">{contactTitle}</Typography>
                 <Typography 
                     sx={{
-                        fontSize: {xs: '0.8rem', sm: '0.9rem', md: '1rem'}, 
+                        fontSize: {xs: '0.9rem', md: '1rem'}, 
                         mb: {xs: 2, sm: 3, md: 3, lg: 4}, 
                         textAlign:{xs:'center', md:'left'}
                     }} 
-                    component="p"
-                >
-                    {contactSemiDescription}
-                </Typography>
+                    component="p">{contactSemiDescription}</Typography>
                 <NextLink href={contactLinkBtn} passHref>
-                    <Button variant="contained" color="secondary" size={'large'} sx={{fontSize: {xs: '0.8rem', xl: '1rem'}}}>{contactVisitBTN}</Button>
+                    <Button 
+                        variant="contained" 
+                        color="secondary" 
+                        size={'large'} 
+                        sx={{fontSize: {xs: '0.8rem', xl: '1rem'}
+                    }}>{contactVisitBTN}</Button>
                 </NextLink>
             </Box>
         </Grid>

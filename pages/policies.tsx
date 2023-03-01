@@ -1,16 +1,16 @@
 import type { NextPage } from "next"
 import { PlantillaLayout } from "../components/layout"
 import { Policies } from "../components/policies"
-import { Container } from '@mui/material';
+import Container from '@mui/material/Container';
 
 const PoliciesPage: NextPage = () => {
     return (
-        <PlantillaLayout title={'Policies | Aspiazu Tecnology'} contentPage={'Page of privacy policies, legal notice and cookie policies'}>
-            <Container sx={{mt:{xs: 12, md: 14}, mb:3}}>
+        <PlantillaLayout title={'Aspiazu Tech | Policies'} contentPage={'Page of privacy policies, legal notice and cookie policies'}>
+            <Container sx={{mt: {xs: 15, sm: 16, md: 17}, mb: 2}}>    
                 <Policies 
-                    company={'Aspiazu Tecnology'} 
+                    company={'Aspiazu Technology'} 
                     title1={'PRIVACY POLICY'}
-                    textTitle1={"This Privacy Policy establishes the terms in which Aspiazu Tecnology uses and protects the information that is provided by its users when using its website. This company is committed to the security of its users' data. When we ask you to fill in the personal information fields with which you can be identified, we do so by ensuring that it will only be used in accordance with the terms of this document. However, this Privacy Policy may change over time or be updated, so we recommend and emphasize that you continually review this page to ensure that you agree with such changes."}
+                    textTitle1={"This Privacy Policy establishes the terms in which Aspiazu Technology uses and protects the information that is provided by its users when using its website. This company is committed to the security of its users' data. When we ask you to fill in the personal information fields with which you can be identified, we do so by ensuring that it will only be used in accordance with the terms of this document. However, this Privacy Policy may change over time or be updated, so we recommend and emphasize that you continually review this page to ensure that you agree with such changes."}
                     title2={'Information that is collected'}
                     textTitle2={'Our website may collect personal information such as: Name, contact information such as your email address and demographic information. Likewise, when necessary, specific information may be required to process an order or make a delivery or billing.'}
                     title3={'Use of the information collected'}

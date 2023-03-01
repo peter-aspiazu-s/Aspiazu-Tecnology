@@ -1,6 +1,9 @@
 import {FC, useContext} from 'react'
 import NextLink from 'next/link';
-import { Typography, Link } from '@mui/material';
+
+import Typography from '@mui/material/Typography';
+import Link from '@mui/material/Link';
+
 import { UiContext } from '../../context';
 
 interface FooterProps {
@@ -11,6 +14,12 @@ interface FooterProps {
     linkServiceTwo:string;
     serviceThree:string;
     linkServiceThree:string;
+    serviceFour:string;
+    linkServiceFour:string;
+    serviceFive:string;
+    linkServiceFive:string;
+    serviceSix:string;
+    linkServiceSix:string;
 }
 
 export const PagesServicesItems: FC<FooterProps> = ({
@@ -21,6 +30,12 @@ export const PagesServicesItems: FC<FooterProps> = ({
     linkServiceTwo,
     serviceThree,
     linkServiceThree,
+    serviceFour,
+    linkServiceFour,
+    serviceFive,
+    linkServiceFive,
+    serviceSix,
+    linkServiceSix,
 }) => {
 
     const { pathname } = useContext(UiContext)
@@ -31,20 +46,18 @@ export const PagesServicesItems: FC<FooterProps> = ({
             sx={{ 
                 fontWeight: 'bold', 
                 mb:2, 
-                fontSize:{xs: '1.2rem', sm: '1.3rem', md: '1.4rem', lg: '1.5rem', xl: '1.6rem'}
-            }}
-        >
-            {titleItemsServices}
-        </Typography>
+                color:'text.disabled',
+                fontSize:{xs: '1.2rem', sm: '1.3rem', md: '1.4rem', lg: '1.5rem', xl: '1.6rem'} 
+            }}>{titleItemsServices}</Typography>
         <NextLink href={linkServiceOne} passHref>
             <Link 
                 variant="overline" 
                 sx={{ 
                     mb:1, 
                     display: 'block', 
-                    color:'text.primary', 
+                    color:'text.disabled', 
                     textDecorationColor:'#90a4ae',
-                    fontSize: {xs:'0.7rem', lg:'0.8rem'} 
+                    fontSize: {xs:'0.7rem'}
                 }}
                 underline={ (pathname === linkServiceOne) ? 'always' : 'hover' }
             >
@@ -57,9 +70,9 @@ export const PagesServicesItems: FC<FooterProps> = ({
                 sx={{ 
                     mb:1, 
                     display: 'block', 
-                    color:'text.primary', 
-                    textDecorationColor:'#90a4ae',
-                    fontSize: {xs:'0.7rem', lg:'0.8rem'} 
+                    color:'text.disabled', 
+                    textDecorationColor:'#90a4ae', 
+                    fontSize: {xs:'0.7rem'}
                 }}
                 underline={ (pathname === linkServiceTwo) ? 'always' : 'hover' }
             >
@@ -72,9 +85,9 @@ export const PagesServicesItems: FC<FooterProps> = ({
                 sx={{ 
                     mb:1, 
                     display: 'block', 
-                    color:'text.primary', 
+                    color:'text.disabled', 
                     textDecorationColor:'#90a4ae',
-                    fontSize: {xs:'0.7rem', lg:'0.8rem'} 
+                    fontSize: {xs:'0.7rem'}
                 }}
                 underline={ (pathname === linkServiceThree) ? 'always' : 'hover' }
             >

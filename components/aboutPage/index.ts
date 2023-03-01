@@ -1,3 +1,6 @@
 export * from './AboutHeader'
 export * from './AboutMisionVision'
 export * from './AboutPersonal'
+export * from './AboutMore'
+export * from './AboutBusinessValues'
+export * from './VideoAbout'
