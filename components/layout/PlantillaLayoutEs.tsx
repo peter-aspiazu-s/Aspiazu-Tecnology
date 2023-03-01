@@ -19,7 +19,7 @@ export const PlantillaLayoutEs: FC<MetaProps> = ({ children, title, contentPage 
         <Head>
             <title>{ title }</title>
             <meta name="description" content={ contentPage } />
-            <link rel="shortcut icon" href="/images/logotipo.webp" />
+            <link rel="shortcut icon" href="/images/logo.png" />
         </Head>
         <Navbar 
           home={'Inicio'}
