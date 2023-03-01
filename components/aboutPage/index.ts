@@ -1,5 +1,3 @@
 export * from './AboutHeader'
 export * from './AboutMisionVision'
 export * from './AboutPersonal'
-export * from './AboutBusinessValues'
-export * from './VideoAbout'
