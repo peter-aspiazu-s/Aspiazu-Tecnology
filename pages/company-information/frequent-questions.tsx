@@ -5,7 +5,7 @@ import { FrequentQuestions } from '../../components/frequent-questions';
 
 const frequentQuestionsPage: NextPage = () => {
   return (
-    <PlantillaLayout title={'EJC | Frequent Questions'} contentPage={'Page of frequent questions'}>
+    <PlantillaLayout title={'Aspiazu Tech | Frequent Questions'} contentPage={'Page of frequent questions'}>
         <Container sx={{mt: {xs: 15, sm: 16, md: 17}, mb: 2}}>    
             <FrequentQuestions
                 frequentQuestionsTitle={'Frequently Asked Questions'}

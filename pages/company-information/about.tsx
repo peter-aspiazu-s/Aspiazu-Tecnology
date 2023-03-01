@@ -8,7 +8,7 @@ import { AboutHeader, AboutMisionVision, AboutPersonal } from '../../components/
 
 const AboutPage: NextPage = () => {
   return (
-    <PlantillaLayout title={'EJC - About'} contentPage={'We are EJC Home Improvement Corp., a well-established company with a long-standing staff, headquartered in New York State. Our focus is oriented towards the management and execution of construction, remodeling and infrastructure repair services.'}>
+    <PlantillaLayout title={'Aspiazu Tech - About'} contentPage={'We are EJC Home Improvement Corp., a well-established company with a long-standing staff, headquartered in New York State. Our focus is oriented towards the management and execution of construction, remodeling and infrastructure repair services.'}>
       <Box sx={{mt: {xs: 13, sm: 14, md: 15}, height: 'auto', position: 'relative'}}>
         <AboutHeader 
           aboutTitle={'About Us?'}

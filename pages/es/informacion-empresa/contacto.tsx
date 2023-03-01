@@ -15,7 +15,7 @@ import YouTubeIcon from '@mui/icons-material/YouTube';
 
 const ContactPage: NextPage = () => {
   return (
-    <PlantillaLayoutEs title={'EJC - Contacto'} contentPage={'Página con información para contactarnos'}>
+    <PlantillaLayoutEs title={'Aspiazu Tech - Contacto'} contentPage={'Página con información para contactarnos'}>
       <Box sx={{mt: {xs: 13, sm: 14, md: 15}, height: 'auto', position: 'relative'}}>
         <ContactHeader 
           contactTitle={'Contáctanos'}

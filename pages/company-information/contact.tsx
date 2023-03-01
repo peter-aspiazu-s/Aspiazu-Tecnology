@@ -39,7 +39,7 @@ const ContactPage: NextPage = () => {
   }, []);
 
   return (
-    <PlantillaLayout title={'EJC - Contact'} contentPage={'Page with information to contact us'}>
+    <PlantillaLayout title={'Aspiazu Tech - Contact'} contentPage={'Page with information to contact us'}>
       <Box sx={{mt: {xs: 13, sm: 14, md: 15}, height: 'auto', position: 'relative'}}>
         <ContactHeader 
           contactTitle={'Contact Us'}
