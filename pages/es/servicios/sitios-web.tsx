@@ -11,8 +11,8 @@ const TechumbrePage: NextPage = () => {
       
       <Box sx={{mt: {xs: 13, sm: 14, md: 15}, height: 'auto', position: 'relative'}}>
         <ServiceOneHeader 
-          ServiceOneHeaderTitle={'Roofing'}
-          ServiceOneHeaderSemiDescription={'La construcción, limpieza y reemplazo de techos en EJC Home Improvement Corp. es una de las mejores inversiones que un propietario puede hacer, ya que la calidad de trabajo y los materiales instalados son de alta calidad.'}
+          ServiceOneHeaderTitle={'Sitios Web'}
+          ServiceOneHeaderSemiDescription={'Creamos tu sitio web con las mejores tecnologías para la web.'}
           ServiceOneHeaderVisitBTN={'Contáctanos'}
           ServiceOneHeaderLinkMessageWhastapp={'https://wa.link/pb7a0b'}
         />
